@@ -1,0 +1,8 @@
+11/20/24:
+
+I've decided to not use Typescript, not because it's complicating the code, but because it's unecessary when putting it in the top-level component, as the benefits of React.js and bootstrap are clean and minimal code.
+
+11/21/24:
+
+I'm getting the hang of the react.js component structure. I am also feeling more familiar with bootstrap syntax. JSX is also becoming more familiar. So far, so good. No suggestions for next session.
+
