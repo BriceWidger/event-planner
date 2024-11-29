@@ -7,6 +7,9 @@ import KeynoteSpeakers from "./components/KeynoteSpeakers";
 import DontMissOut from "./components/DontMissOut";
 import Schedule from "./components/Schedule";
 import ConferenceLocation from "./components/ConferenceLocation";
+import Sponsors from "./components/Sponsors";
+import NewsAndUpdates from "./components/NewsAndUpdates";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
         <DontMissOut />
         <Schedule />
         <ConferenceLocation />
+        <Sponsors />
+        <NewsAndUpdates />
+        <Footer />
       </main>
     </div>
   );
