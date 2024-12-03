@@ -1,5 +1,5 @@
-// HomeNavbar.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavLink = ({ children, href }) => (
   <a
@@ -23,12 +23,13 @@ const HomeNavbar = () => {
       <NavLink href="#">LOCATION</NavLink>
       <NavLink href="#">SPONSORS</NavLink>
       <NavLink href="#">NEWS</NavLink>
-      <button
+      <Link
+        to="/tickets"
         className="float-end btn"
         style={{ backgroundColor: "rgb(61, 104, 137)" }}
       >
         REGISTOR NOW
-      </button>
+      </Link>
     </nav>
   );
 };
