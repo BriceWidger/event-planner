@@ -10,6 +10,7 @@ const CheckoutHeader = () => {
         height: "59.1333px",
         border: "1px solid #ccc",
         padding: "14px",
+        backgroundColor: "white",
       }}
     >
       <div className="d-flex flex-grow-1">
