@@ -1,7 +1,9 @@
 import React, { useState, useRef, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import CheckoutHeader from "./CheckoutHeader";
 
 const TicketsPage = () => {
+  const navigate = useNavigate();
   const [showAlert, setShowAlert] = useState(false);
   const [alertVisible, setAlertVisible] = useState(false);
   const selectRef = useRef(null);
@@ -9,7 +11,9 @@ const TicketsPage = () => {
   const handleContinueClick = useCallback(() => {
     const selectedValue = selectRef.current.value;
 
-    if (selectedValue === "0") {
+    if (selectedValue !== "0") {
+      navigate("/details"); // navigate to /details
+    } else {
       setShowAlert(true);
       setTimeout(() => {
         setAlertVisible(true);
@@ -17,10 +21,8 @@ const TicketsPage = () => {
       setTimeout(() => {
         setAlertVisible(false);
       }, 4100); // adjust the timeout to account for the delay
-    } else {
-      setShowAlert(false);
     }
-  }, []);
+  }, [navigate]);
 
   return (
     <div
