@@ -1,19 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import CheckoutHeader from "./CheckoutHeader";
 
 const TicketsPage = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertVisible, setAlertVisible] = useState(false);
+  const selectRef = useRef(null);
 
-  const handleContinueClick = () => {
-    setShowAlert(true);
-    setTimeout(() => {
-      setAlertVisible(true);
-    }, 100); // add a small delay here
-    setTimeout(() => {
-      setAlertVisible(false);
-    }, 4100); // adjust the timeout to account for the delay
-  };
+  const handleContinueClick = useCallback(() => {
+    const selectedValue = selectRef.current.value;
+
+    if (selectedValue === "0") {
+      setShowAlert(true);
+      setTimeout(() => {
+        setAlertVisible(true);
+      }, 100); // add a small delay here
+      setTimeout(() => {
+        setAlertVisible(false);
+      }, 4100); // adjust the timeout to account for the delay
+    } else {
+      setShowAlert(false);
+    }
+  }, []);
 
   return (
     <div
@@ -59,7 +66,7 @@ const TicketsPage = () => {
                 <div className="ticket-description"></div>
               </div>
               <div className="col-md-4">
-                <select className="form-select">
+                <select className="form-select" ref={selectRef}>
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
