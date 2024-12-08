@@ -1,16 +1,12 @@
 import React from "react";
+import BodyBackgroundColor from "./BodyBackgroundColor";
 import CheckoutHeader from "./CheckoutHeader";
 
 const DetailsPage = () => {
   return (
-    <div
-      style={{
-        backgroundColor: "#f8f9fc",
-        height: "100vh",
-      }}
-    >
+    <BodyBackgroundColor backgroundColor="#f8f9fc">
       <CheckoutHeader />
-    </div>
+    </BodyBackgroundColor>
   );
 };
 
