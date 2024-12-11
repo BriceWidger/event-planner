@@ -1,6 +1,7 @@
 import React from "react";
 import ArrowDivider from "./ArrowDivider";
 import { Link } from "react-router-dom";
+import DetailsTimer from "./DetailsTimer";
 
 const CheckoutHeader = () => {
   return (
@@ -43,7 +44,11 @@ const CheckoutHeader = () => {
           </span>
         </div>
       </div>
+
       <div className="d-flex flex-grow-1 justify-content-end">
+        <div>
+          <DetailsTimer />
+        </div>
         <div className="secure-lock-container d-inline-flex align-items-center">
           <img
             src="/images/locked-icon.png"

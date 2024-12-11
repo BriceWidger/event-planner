@@ -3,6 +3,7 @@ import BodyBackgroundColor from "./BodyBackgroundColor";
 import CheckoutHeader from "./CheckoutHeader";
 import DetailsForm from "./DetailsForm";
 import DetailsOrderSummary from "./DetailsOrderSummary";
+import DetailsTimer from "./DetailsTimer";
 
 const DetailsPage = () => {
   return (
