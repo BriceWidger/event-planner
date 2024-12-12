@@ -12,7 +12,6 @@ const DetailsPage = () => {
       <div
         className="checkout-container clearfix"
         style={{
-          height: "423.133px",
           paddingTop: "36px",
           paddingBottom: "50px",
         }}

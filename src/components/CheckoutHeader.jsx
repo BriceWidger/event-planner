@@ -1,9 +1,12 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import ArrowDivider from "./ArrowDivider";
 import { Link } from "react-router-dom";
 import DetailsTimer from "./DetailsTimer";
 
 const CheckoutHeader = () => {
+  const location = useLocation();
+
   return (
     <div
       className="checkout-header vw-100 d-flex justify-content-between align-items-center"
@@ -44,11 +47,8 @@ const CheckoutHeader = () => {
           </span>
         </div>
       </div>
-
       <div className="d-flex flex-grow-1 justify-content-end">
-        <div>
-          <DetailsTimer />
-        </div>
+        <div>{location.pathname === "/details" && <DetailsTimer />}</div>
         <div className="secure-lock-container d-inline-flex align-items-center">
           <img
             src="/images/locked-icon.png"
