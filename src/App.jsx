@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import TicketsPage from "./components/TicketsPage";
 import DetailsPage from "./components/DetailsPage";
+import ConfirmationPage from "./components/ConfirmationPage";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/tickets" element={<TicketsPage />} />
         <Route exact path="/details" element={<DetailsPage />} />
+        <Route exact path="/confirmation" element={<ConfirmationPage />} />
       </Routes>
     </BrowserRouter>
   );
