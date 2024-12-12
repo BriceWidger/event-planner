@@ -1,5 +1,5 @@
 import React from "react";
-import CheckoutHeader from "./CheckoutHeader";
+import CheckoutHeader from "../CheckoutHeader";
 import DetailsForm from "./DetailsForm";
 import DetailsOrderSummary from "./DetailsOrderSummary";
 import DetailsTimer from "./DetailsTimer";

@@ -1,5 +1,5 @@
 import React from "react";
-import Speaker from "./Speaker";
+import SpeakerInfo from "./SpeakerInfo";
 
 const KEYNOTE_CONTAINER_HEIGHT = "880.5px";
 const KEYNOTE_CONTAINER_MIDDLE_HEIGHT = "726.5px";
@@ -40,25 +40,25 @@ const KeynoteSpeakers = () => {
             </section>
           </header>
           <section className="speakers-row-main row justify-content-center">
-            <Speaker
+            <SpeakerInfo
               imageSrc="https://res.cloudinary.com/eventcreate/image/upload/v1575749661/themes/theme%20assets/speaker2_swuare_n9wd9s.jpg"
               name="Yvonne Butler"
               role="CEO, ACME"
               info="Pellentesque ullamcorper tortor ut auctor consequat. Nullam sed nisi massa."
             />
-            <Speaker
+            <SpeakerInfo
               imageSrc="https://res.cloudinary.com/eventcreate/image/upload/v1575749662/themes/theme%20assets/speaker1_square_wn3ik5.jpg"
               name="Larry Coleman"
               role="CMO, XYZ, Inc."
               info="Pellentesque ullamcorper tortor ut auctor consequat. Nullam sed nisi massa."
             />
-            <Speaker
+            <SpeakerInfo
               imageSrc="https://res.cloudinary.com/eventcreate/image/upload/v1575749661/themes/theme%20assets/speaker3_swuare_ofjsvm.jpg"
               name="Albert Dean"
               role="FOUNDER, ACME"
               info="Pellentesque ullamcorper tortor ut auctor consequat. Nullam sed nisi massa."
             />
-            <Speaker
+            <SpeakerInfo
               imageSrc="https://res.cloudinary.com/eventcreate/image/upload/v1575750521/themes/theme%20assets/speaker4_swuare_zxjryd.jpg"
               name="Kurt Young"
               role="CFO, XYZ, Inc."

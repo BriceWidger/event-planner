@@ -1,5 +1,5 @@
 import React from "react";
-import ScheduledTime from "../ScheduledTime";
+import ScheduledTime from "./ScheduledTime";
 
 const Schedule = () => {
   return (

@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./components/homepage/HomePage";
 import TicketsPage from "./components/ticketspage/TicketsPage";
-import DetailsPage from "./components/DetailsPage";
-import ConfirmationPage from "./components/ConfirmationPage";
+import DetailsPage from "./components/detailspage/DetailsPage";
+import ConfirmationPage from "./components/confirmationpage/ConfirmationPage";
 
 function App() {
   return (
