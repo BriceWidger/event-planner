@@ -1,5 +1,4 @@
 import React from "react";
-import BodyBackgroundColor from "./BodyBackgroundColor";
 import CheckoutHeader from "./CheckoutHeader";
 import DetailsForm from "./DetailsForm";
 import DetailsOrderSummary from "./DetailsOrderSummary";
@@ -7,7 +6,14 @@ import DetailsTimer from "./DetailsTimer";
 
 const DetailsPage = () => {
   return (
-    <BodyBackgroundColor backgroundColor="#f8f9fc">
+    <div
+      style={{
+        backgroundColor: "#f8f9fc",
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <CheckoutHeader />
       <div
         className="checkout-container clearfix"
@@ -21,7 +27,7 @@ const DetailsPage = () => {
           <DetailsOrderSummary />
         </div>
       </div>
-    </BodyBackgroundColor>
+    </div>
   );
 };
 

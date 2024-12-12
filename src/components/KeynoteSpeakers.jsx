@@ -10,6 +10,7 @@ const KeynoteSpeakers = () => {
   return (
     <section
       // Main container
+      id="keynote-container-main"
       className="keynote-container-main container-fluid p-0 d-flex align-items-center"
       style={{ height: KEYNOTE_CONTAINER_HEIGHT }}
     >

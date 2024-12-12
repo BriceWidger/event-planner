@@ -3,6 +3,7 @@ import React from "react";
 const Sponsors = () => {
   return (
     <section
+      id="sponsors-container-main"
       className="sponsors-container-main mx-auto d-flex justify-content-center align-items-center"
       style={{ height: "461.2px" }}
     >

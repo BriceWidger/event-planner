@@ -3,7 +3,8 @@ import React from "react";
 const NewsAndUpdates = () => {
   return (
     <div
-      className="d-flex justify-content-center align-items-center"
+      id="news-updates-container"
+      className="news-updates-container d-flex justify-content-center align-items-center"
       style={{ height: 1075.97, backgroundColor: "#eaeaea" }}
     >
       <div className="container mt-5 mb-5">

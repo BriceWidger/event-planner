@@ -1,9 +1,10 @@
 import React from "react";
-import ScheduledTime from "./ScheduledTime";
+import ScheduledTime from "../ScheduledTime";
 
 const Schedule = () => {
   return (
     <div
+      id="schedule-container-middle"
       className="schedule-container-middle d-flex justify-content-center align-items-center"
       style={{
         height: "746.4px",

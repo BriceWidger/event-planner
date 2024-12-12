@@ -1,15 +1,15 @@
 // HomePage.jsx
 import React from "react";
-import HomeNavbar from "./HomeNavbar";
+import HomeNavbar from "../HomeNavbar";
 import HomeMainPicture from "./HomeMainPicture";
-import CountDownClock from "./CountDownClock";
-import KeynoteSpeakers from "./KeynoteSpeakers";
-import DontMissOut from "./DontMissOut";
+import CountDownClock from "../CountDownClock";
+import KeynoteSpeakers from "../KeynoteSpeakers";
+import DontMissOut from "../DontMissOut";
 import Schedule from "./Schedule";
 import ConferenceLocation from "./ConferenceLocation";
 import Sponsors from "./Sponsors";
-import NewsAndUpdates from "./NewsAndUpdates";
-import Footer from "./Footer";
+import NewsAndUpdates from "../NewsAndUpdates";
+import Footer from "../Footer";
 
 function HomePage() {
   return (
