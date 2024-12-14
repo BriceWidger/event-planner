@@ -21,7 +21,13 @@ const DetailsForm = () => {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      navigate("/confirmation");
+      navigate("/confirmation", {
+        state: {
+          firstName,
+          lastName,
+          email,
+        },
+      });
     }
   };
 
