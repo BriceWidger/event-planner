@@ -17,23 +17,25 @@ const KeynoteSpeakers = () => (
       style={{ height: KEYNOTE_CONTAINER_MIDDLE_HEIGHT, width: "100vw" }}
     >
       <div className="px-0">
-        <header className="keynote-speakers-title-container-outer container-lg h-100 d-flex flex-column justify-content-start align-items-center mb-5">
-          <section className="keynote-speakers-title-container-inner w-75 mx-auto">
-            <h1
-              className="keynote-title text-center"
-              style={{ fontSize: KEYNOTE_TITLE_FONT_SIZE }}
-            >
-              Keynote Speakers
-            </h1>
-            <p
-              className="keynote-subtitle text-center"
-              style={{ color: "#888" }}
-            >
-              We are extremely excited to showcase the lineup of impressive
-              keynote speakers. Pellentesque ullamcorper tortor ut auctor
-              consequat. Nullam sed nisi massa. Aliquam eget enim nunc. Praesent
-              blandit blandit ornare.
-            </p>
+        <header className="keynote-speakers-title-container-outer container-lg h-100 d-flex flex-column mb-5">
+          <section className="keynote-speakers-title-container-inner w-100 d-flex justify-content-center">
+            <div>
+              <h1
+                className="keynote-title text-center"
+                style={{ fontSize: KEYNOTE_TITLE_FONT_SIZE }}
+              >
+                Keynote Speakers
+              </h1>
+              <p
+                className="keynote-subtitle text-center"
+                style={{ color: "#888", width: "616.667px", height: "72px" }}
+              >
+                We are extremely excited to showcase the lineup of impressive
+                keynote speakers. Pellentesque ullamcorper tortor ut auctor
+                consequat. Nullam sed nisi massa. Aliquam eget enim nunc.
+                Praesent blandit blandit ornare.
+              </p>
+            </div>
           </section>
         </header>
         <section
