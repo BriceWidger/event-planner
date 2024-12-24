@@ -1,4 +1,5 @@
 import React from "react";
+import RegisterNowButton from "./RegisterNowButton";
 
 const DontMissOut = () => {
   return (
@@ -23,12 +24,7 @@ const DontMissOut = () => {
         >
           Register by December 26 . We look forward to seeing you there.
         </p>
-        <button
-          className="btn"
-          style={{ backgroundColor: "rgb(61, 104, 137)" }}
-        >
-          REGISTER NOW
-        </button>
+        <RegisterNowButton />
       </div>
     </div>
   );

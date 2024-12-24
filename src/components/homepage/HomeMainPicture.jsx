@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import RegisterNowButton from "./RegisterNowButton";
 
 const HomeMainPicture = () => {
   return (
@@ -49,17 +49,7 @@ const HomeMainPicture = () => {
           >
             Join us on December 26
           </p>
-          <Link
-            to="/tickets"
-            className="btn"
-            style={{
-              backgroundColor: "#3d6889",
-              color: "#fff",
-              borderRadius: "30px",
-            }}
-          >
-            REGISTOR NOW
-          </Link>
+          <RegisterNowButton />
         </div>
       </div>
     </div>
