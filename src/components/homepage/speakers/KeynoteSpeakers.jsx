@@ -24,7 +24,7 @@ const KeynoteSpeakers = () => (
                 className="keynote-title text-center"
                 style={{ fontSize: KEYNOTE_TITLE_FONT_SIZE }}
               >
-                Keynote Speakers DUUUDE
+                Keynote Speakers
               </h1>
               <p
                 className="keynote-subtitle text-center"
