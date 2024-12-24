@@ -36,7 +36,10 @@ const KeynoteSpeakers = () => (
             </p>
           </section>
         </header>
-        <section className="speakers-row-main row justify-content-center">
+        <section
+          className="speakers-row-main row justify-content-center"
+          style={{ width: "970px", margin: "0 auto" }}
+        >
           <SpeakerInfo
             imageSrc="https://res.cloudinary.com/eventcreate/image/upload/v1575749661/themes/theme%20assets/speaker2_swuare_n9wd9s.jpg"
             name="Yvonne Butler"
@@ -62,7 +65,10 @@ const KeynoteSpeakers = () => (
             info="Pellentesque ullamcorper tortor ut auctor consequat. Nullam sed nisi massa."
           />
         </section>
-        <div className="col-md-8 mx-auto pt-5">
+        <div
+          className="col-md-8 mx-auto"
+          style={{ height: "72px", width: "940px", marginTop: "80px" }}
+        >
           <strong>Interested in speaking at the event?</strong> Aliquam erat
           volutpat. Aenean id enim ut nisi consequat venenatis. Phasellus cursus
           ipsum at nunc placerat auctor. Curabitur lorem arcu, lacinia nec
