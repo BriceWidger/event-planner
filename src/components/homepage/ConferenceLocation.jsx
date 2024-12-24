@@ -63,10 +63,14 @@ const ConferenceLocation = () => {
           </div>
         </div>
         <div className="map-img-container col col-md-12 fr-inner d-flex justify-content-center">
-          <img
-            src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg"
-            style={{ width: "940px", height: "400px", padding: "0 15px" }}
-            className="img-fluid"
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12090.753313915742!2d-73.99475595000001!3d40.7468831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1735082907278!5m2!1sen!2sus"
+            width="940"
+            height="400"
+            style={{ border: "0", padding: "0 15px" }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
       </div>
