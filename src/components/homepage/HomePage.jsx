@@ -7,8 +7,8 @@ import KeynoteSpeakers from "./speakers/KeynoteSpeakers";
 import DontMissOut from "./DontMissOut";
 import Schedule from "./schedule/Schedule";
 import ConferenceLocationContainer from "./conferenceLocation/ConferenceLocationContainer";
-import Sponsors from "./sponsers/Sponsors";
-import NewsAndUpdates from "./NewsAndUpdates";
+import Sponsors from "./sponsors/Sponsors";
+import NewsAndUpdates from "./newsAndUpdates/NewsAndUpdatesContainer";
 import HomeFooter from "./HomeFooter";
 
 function HomePage() {
