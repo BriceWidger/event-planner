@@ -7,7 +7,7 @@ import KeynoteSpeakers from "./speakers/KeynoteSpeakers";
 import DontMissOut from "./DontMissOut";
 import Schedule from "./schedule/Schedule";
 import ConferenceLocationContainer from "./conferenceLocation/ConferenceLocationContainer";
-import Sponsors from "./Sponsors";
+import Sponsors from "./sponsers/Sponsors";
 import NewsAndUpdates from "./NewsAndUpdates";
 import HomeFooter from "./HomeFooter";
 
