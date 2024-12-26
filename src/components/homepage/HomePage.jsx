@@ -6,7 +6,7 @@ import CountDownClock from "./CountDownClock";
 import KeynoteSpeakers from "./speakers/KeynoteSpeakers";
 import DontMissOut from "./DontMissOut";
 import Schedule from "./schedule/Schedule";
-import ConferenceLocation from "./ConferenceLocation";
+import ConferenceLocationContainer from "./conferenceLocation/ConferenceLocationContainer";
 import Sponsors from "./Sponsors";
 import NewsAndUpdates from "./NewsAndUpdates";
 import HomeFooter from "./HomeFooter";
@@ -23,7 +23,7 @@ function HomePage() {
         <KeynoteSpeakers />
         <DontMissOut />
         <Schedule />
-        <ConferenceLocation />
+        <ConferenceLocationContainer />
         <Sponsors />
         <NewsAndUpdates />
         <HomeFooter />
