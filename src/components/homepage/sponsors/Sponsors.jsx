@@ -7,7 +7,11 @@ const Sponsors = () => {
     <section
       id="sponsors-container-main"
       className="sponsors-container-main mx-auto d-flex justify-content-center align-items-center"
-      style={{ height: "461.2px" }}
+      style={{
+        height: "461.2px",
+        maxHeight: "100vh",
+        overflow: "auto",
+      }}
     >
       <div className="content-block-content d-flex justify-content-center align-items-center">
         <div className="container text-center">

@@ -4,17 +4,17 @@ const SponsorsLogos = () => {
   return (
     <div
       className="sponsors-logos ec-repeatable"
-      style={{ width: "940px", height: "44px" }}
+      style={{ width: "100%", height: "auto" }}
     >
       <div className="row fr-inner justify-content-around">
-        <div className="col fr-inner">
+        <div className="col-md-2 col-lg-1">
           <img
             src="https://res.cloudinary.com/eventcreate/image/upload/v1638124619/themes/theme%20assets/apple_waf4wo.svg"
             height="44"
             alt="Apple"
           />
         </div>
-        <div className="col fr-inner">
+        <div className="col-md-2 col-lg-1">
           <img
             src="https://res.cloudinary.com/eventcreate/image/upload/v1638124619/themes/theme%20assets/amazon_jreo4v.svg"
             height="44"
@@ -22,7 +22,7 @@ const SponsorsLogos = () => {
             alt="Amazon"
           />
         </div>
-        <div className="col fr-inner">
+        <div className="col-md-2 col-lg-1">
           <img
             src="https://res.cloudinary.com/eventcreate/image/upload/v1638124619/themes/theme%20assets/cisco_bp2d1e.svg"
             height="44"
@@ -30,7 +30,7 @@ const SponsorsLogos = () => {
             alt="Cisco"
           />
         </div>
-        <div className="col fr-inner">
+        <div className="col-md-2 col-lg-1">
           <img
             src="https://res.cloudinary.com/eventcreate/image/upload/v1638124619/themes/theme%20assets/ebay_umezde.svg"
             height="44"
@@ -38,7 +38,7 @@ const SponsorsLogos = () => {
             alt="eBay"
           />
         </div>
-        <div className="col fr-inner">
+        <div className="col-md-2 col-lg-1">
           <img
             src="https://res.cloudinary.com/eventcreate/image/upload/v1638124621/themes/theme%20assets/intel_oqlavl.svg"
             height="44"
@@ -46,7 +46,7 @@ const SponsorsLogos = () => {
             alt="Intel"
           />
         </div>
-        <div className="col fr-inner">
+        <div className="col-md-2 col-lg-1">
           <img
             src="https://res.cloudinary.com/eventcreate/image/upload/v1638124623/themes/theme%20assets/salesforce_uxmc6p.svg"
             height="44"

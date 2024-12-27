@@ -4,11 +4,11 @@ const SponsorsTitle = () => {
   return (
     <div className="text-center d-flex flex-column align-items-center">
       <h2
+        className="display-4 font-weight-bold mb-4"
         style={{
           fontSize: "52px",
           fontFamily: "'Unna', serif",
           fontWeight: "400",
-          margin: "0",
           lineHeight: "110%",
         }}
       >
@@ -16,12 +16,8 @@ const SponsorsTitle = () => {
       </h2>
       <div style={{ height: "16px" }}></div>
       <p
+        className="lead text-muted"
         style={{
-          width: "616.667px",
-          height: "120px",
-          overflow: "hidden",
-          color: "#888",
-          fontWeight: 400,
           fontSize: "16px",
           lineHeight: "150%",
           fontFamily: "'Nunito Sans', sans-serif",
