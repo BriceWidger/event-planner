@@ -9,7 +9,7 @@ import Schedule from "./schedule/Schedule";
 import ConferenceLocationContainer from "./conferenceLocation/ConferenceLocationContainer";
 import Sponsors from "./sponsors/Sponsors";
 import NewsAndUpdates from "./newsAndUpdates/NewsAndUpdatesContainer";
-import HomeFooter from "./HomeFooter";
+import HomeFooter from "./footer/Footer";
 
 function HomePage() {
   return (
