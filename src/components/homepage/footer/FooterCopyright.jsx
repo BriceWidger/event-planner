@@ -2,7 +2,16 @@ import React from "react";
 
 const FooterCopyright = () => {
   return (
-    <p className="text-white">
+    <p
+      style={{
+        color: "#888",
+        fontSize: "13px",
+        fontWeight: 400,
+        lineHeight: "150%",
+        fontFamily: "'Nunito Sans', sans-serif",
+        paddingTop: "100px",
+      }}
+    >
       &copy; 2024. All Rights Reserved. <br />
       Event website powered by{" "}
       <a

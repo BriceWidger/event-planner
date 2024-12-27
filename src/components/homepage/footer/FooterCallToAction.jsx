@@ -1,15 +1,8 @@
 import React from "react";
+import RegisterNowButton from "../RegisterNowButton";
 
 const FooterCallToAction = () => {
-  return (
-    <a
-      rel="nofollow"
-      href="https://checkout.eventcreate.com/annual-conference-666681/select-buy"
-      className="btn btn-light"
-    >
-      Register Now
-    </a>
-  );
+  return <RegisterNowButton />;
 };
 
 export default FooterCallToAction;

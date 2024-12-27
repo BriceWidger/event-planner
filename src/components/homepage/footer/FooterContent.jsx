@@ -6,7 +6,18 @@ const FooterContent = () => {
       <div className="container-inner">
         <div className="row">
           <div className="col-md-8 offset-md-2">
-            <p className="text-white" style={{ marginBottom: 32 }}>
+            <p
+              className="text-white"
+              style={{
+                marginBottom: 32,
+                fontWeight: 400,
+                fontSize: 13,
+                lineHeight: "150%",
+                fontFamily: "'Nunito Sans', sans-serif",
+                color: "#888",
+                opacity: "0.8",
+              }}
+            >
               Integer fermentum tempor quam in hendrerit. Quisque non augue
               elit. Curabitur at mollis leo. Suspendisse sit amet condimentum
               tortor. Etiam ac augue non lacus malesuada mollis sit amet id
