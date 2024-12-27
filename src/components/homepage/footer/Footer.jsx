@@ -12,7 +12,7 @@ const Footer = () => {
       id="footer1"
     >
       <div className="content-block-bg"></div>
-      <div className="content-block-content">
+      <div className="content-block-content text-center">
         <FooterContent />
         <FooterCallToAction />
         <FooterCopyright />
