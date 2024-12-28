@@ -1,0 +1,59 @@
+/* responsive.css */
+
+/* Bootstrap 5.3.3 breakpoints */
+@media (max-width: 575.98px) {
+  /* styles for xs breakpoint */
+  body {
+    background-color: lightpink;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* styles for sm breakpoint */
+  body {
+    background-color: lightcyan;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* styles for md breakpoint */
+  body {
+    background-color: lightgreen;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* styles for lg breakpoint */
+  body {
+    background-color: lightblue;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* styles for xl breakpoint */
+  body {
+    background-color: lightyellow;
+  }
+}
+
+/* Custom breakpoints for specific devices or screen sizes */
+@media (max-width: 480px) {
+  /* styles for small mobile devices */
+  body {
+    background-color: coral;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  /* styles for small desktop devices */
+  body {
+    background-color: mintcream;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* styles for large desktop devices */
+  body {
+    background-color: powderblue;
+  }
+}
