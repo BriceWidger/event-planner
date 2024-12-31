@@ -1,6 +1,6 @@
 // HomePage.jsx
 import React from "react";
-import HomeNavbar from "./HomeNavbar";
+import HomeNavbar from "./homeNavbar/HomeNavbar";
 import HomeMainPicture from "./HomeMainPicture";
 import CountDownClock from "./CountDownClock";
 import KeynoteSpeakers from "./speakers/KeynoteSpeakers";
