@@ -1,35 +1,34 @@
 import React from "react";
 import SpeakerInfo from "./SpeakerInfo";
 
-const KEYNOTE_CONTAINER_HEIGHT = "880.5px";
-const KEYNOTE_CONTAINER_MIDDLE_HEIGHT = "726.5px";
-const KEYNOTE_SPEAKERS_TITLE_CONTAINER_WIDTH = "616.667px";
-const KEYNOTE_TITLE_FONT_SIZE = "48px";
-
 const KeynoteSpeakers = () => (
   <section
     id="keynote-container-main"
     className="keynote-container-main container-fluid p-0 d-flex align-items-center"
-    style={{ height: KEYNOTE_CONTAINER_HEIGHT }}
   >
-    <div
-      className="keynote-container-middle container-fluid vw-100 p-0 m-0"
-      style={{ height: KEYNOTE_CONTAINER_MIDDLE_HEIGHT, width: "100vw" }}
-    >
+    <div className="keynote-container-middle container-fluid vw-100 p-0 m-0">
       <div className="px-0">
-        <header className="keynote-speakers-title-container-outer container-lg h-100 d-flex flex-column mb-5">
+        <header
+          className="keynote-speakers-title-container-outer container-lg h-100 d-flex flex-column mb-0"
+          style={{
+            paddingTop: "70px",
+            paddingBottom: "70px",
+          }}
+        >
           <section className="keynote-speakers-title-container-inner w-100 d-flex justify-content-center">
-            <div>
+            <div className="col-md-8 col-lg-6">
               <h1
-                className="keynote-title text-center"
-                style={{ fontSize: KEYNOTE_TITLE_FONT_SIZE }}
+                className="keynote-title text-center display-4"
+                style={{
+                  fontWeight: "400",
+                  lineHeight: "110%",
+                  fontFamily: "'Unna', serif",
+                  fontSize: "46px",
+                }}
               >
                 Keynote Speakers
               </h1>
-              <p
-                className="keynote-subtitle text-center"
-                style={{ color: "#888", width: "616.667px", height: "72px" }}
-              >
+              <p className="keynote-subtitle text-center">
                 We are extremely excited to showcase the lineup of impressive
                 keynote speakers. Pellentesque ullamcorper tortor ut auctor
                 consequat. Nullam sed nisi massa. Aliquam eget enim nunc.
@@ -38,39 +37,41 @@ const KeynoteSpeakers = () => (
             </div>
           </section>
         </header>
-        <section
-          className="speakers-row-main row justify-content-center"
-          style={{ width: "970px", margin: "0 auto" }}
-        >
-          <SpeakerInfo
-            imageSrc="https://res.cloudinary.com/eventcreate/image/upload/v1575749661/themes/theme%20assets/speaker2_swuare_n9wd9s.jpg"
-            name="Yvonne Butler"
-            role="CEO, ACME"
-            info="Pellentesque ullamcorper tortor ut auctor consequat. Nullam sed nisi massa."
-          />
-          <SpeakerInfo
-            imageSrc="https://res.cloudinary.com/eventcreate/image/upload/v1575749662/themes/theme%20assets/speaker1_square_wn3ik5.jpg"
-            name="Larry Coleman"
-            role="CMO, XYZ, Inc."
-            info="Pellentesque ullamcorper tortor ut auctor consequat. Nullam sed nisi massa."
-          />
-          <SpeakerInfo
-            imageSrc="https://res.cloudinary.com/eventcreate/image/upload/v1575749661/themes/theme%20assets/speaker3_swuare_ofjsvm.jpg"
-            name="Albert Dean"
-            role="FOUNDER, ACME"
-            info="Pellentesque ullamcorper tortor ut auctor consequat. Nullam sed nisi massa."
-          />
-          <SpeakerInfo
-            imageSrc="https://res.cloudinary.com/eventcreate/image/upload/v1575750521/themes/theme%20assets/speaker4_swuare_zxjryd.jpg"
-            name="Kurt Young"
-            role="CFO, XYZ, Inc."
-            info="Pellentesque ullamcorper tortor ut auctor consequat. Nullam sed nisi massa."
-          />
+        <section className="speakers-row-main row justify-content-center">
+          <div className="col-md-6 col-lg-3">
+            <SpeakerInfo
+              imageSrc="https://res.cloudinary.com/eventcreate/image/upload/v1575749661/themes/theme%20assets/speaker2_swuare_n9wd9s.jpg"
+              name="Yvonne Butler"
+              role="CEO, ACME"
+              info="Pellentesque ullamcorper tortor ut auctor consequat. Nullam sed nisi massa."
+            />
+          </div>
+          <div className="col-md-6 col-lg-3">
+            <SpeakerInfo
+              imageSrc="https://res.cloudinary.com/eventcreate/image/upload/v1575749662/themes/theme%20assets/speaker1_square_wn3ik5.jpg"
+              name="Larry Coleman"
+              role="CMO, XYZ, Inc."
+              info="Pellentesque ullamcorper tortor ut auctor consequat. Nullam sed nisi massa."
+            />
+          </div>
+          <div className="col-md-6 col-lg-3">
+            <SpeakerInfo
+              imageSrc="https://res.cloudinary.com/eventcreate/image/upload/v1575749661/themes/theme%20assets/speaker3_swuare_ofjsvm.jpg"
+              name="Albert Dean"
+              role="FOUNDER, ACME"
+              info="Pellentesque ullamcorper tortor ut auctor consequat. Nullam sed nisi massa."
+            />
+          </div>
+          <div className="col-md-6 col-lg-3">
+            <SpeakerInfo
+              imageSrc="https://res.cloudinary.com/eventcreate/image/upload/v1575750521/themes/theme%20assets/speaker4_swuare_zxjryd.jpg"
+              name="Kurt Young"
+              role="CFO, XYZ, Inc."
+              info="Pellentesque ullamcorper tortor ut auctor consequat. Nullam sed nisi massa."
+            />
+          </div>
         </section>
-        <div
-          className="col-md-8 mx-auto"
-          style={{ height: "72px", width: "940px", marginTop: "80px" }}
-        >
+        <div className="col-md-8 col-lg-6 mx-auto">
           <strong>Interested in speaking at the event?</strong> Aliquam erat
           volutpat. Aenean id enim ut nisi consequat venenatis. Phasellus cursus
           ipsum at nunc placerat auctor. Curabitur lorem arcu, lacinia nec

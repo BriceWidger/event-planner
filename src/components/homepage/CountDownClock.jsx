@@ -38,7 +38,13 @@ const CountDownClock = () => {
             <div
               key={i}
               className="col-md-2 col-xs-3 mb-2"
-              style={{ textAlign: "center" }}
+              style={{
+                textAlign: "center",
+                flex: 1,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
             >
               <div
                 className="h1"
@@ -60,16 +66,16 @@ const CountDownClock = () => {
                       : "s"
                   ]
                 )}
-                <span
-                  style={{
-                    fontSize: 16,
-                    fontFamily: "Poppins, sans-serif",
-                    display: "block",
-                  }}
-                >
-                  {label}
-                </span>
               </div>
+              <span
+                style={{
+                  fontSize: 16,
+                  fontFamily: "Poppins, sans-serif",
+                  display: "block",
+                }}
+              >
+                {label}
+              </span>
             </div>
           ))}
         </div>

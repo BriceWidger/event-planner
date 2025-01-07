@@ -1,5 +1,8 @@
-@media (max-width: 768px) {
-  .content-block-content .d-flex {
-    flex-direction: column;
+@media (max-width: 372px) {
+  .content-block-countdown .row .col-md-2 {
+    flex: 0 0 100%;
+  }
+  .content-block-countdown .h1 {
+    font-size: 40px;
   }
 }
