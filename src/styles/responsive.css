@@ -1,8 +1,14 @@
-@media (max-width: 372px) {
-  .content-block-countdown .row .col-md-2 {
-    flex: 0 0 100%;
+@media (max-width: 768px) {
+  .AnnualConferenceMainContainer {
+    max-width: 90vw;
   }
-  .content-block-countdown .h1 {
-    font-size: 40px;
+  .ec-editor-block h1 {
+    font-size: 3vw;
+  }
+  .ec-editor-block p {
+    font-size: 1.2rem;
+  }
+  .register-now-btn-container {
+    width: 80%;
   }
 }

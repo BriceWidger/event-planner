@@ -20,7 +20,7 @@ const CountDownClock = () => {
 
   return (
     <div
-      className="content-block content-block-countdown content-block-theme39-countdown-1 active"
+      className="countdown-container"
       style={{
         backgroundColor: "#e9e9e9",
         padding: "17px 0",
@@ -29,30 +29,49 @@ const CountDownClock = () => {
         alignItems: "center",
       }}
     >
-      <div className="container text-center">
+      <div
+        className="countdown-container-block container text-center"
+        style={{
+          width: 304,
+          padding: "0 15px",
+          height: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <div
           className="row d-flex justify-content-center"
-          style={{ flexWrap: "wrap" }}
+          style={{
+            margin: "0 auto",
+          }}
         >
           {["days", "hours", "minutes", "seconds"].map((label, i) => (
             <div
               key={i}
-              className="col-md-2 col-xs-3 mb-2"
+              className="col-md-3 col-xs-3 mb-2"
               style={{
                 textAlign: "center",
                 flex: 1,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
+                justifyContent: "center",
+                width: 76,
+                padding: "0 5px",
               }}
             >
               <div
                 className="h1"
                 style={{
-                  fontSize: 60,
+                  fontSize: 40,
                   margin: 0,
                   fontWeight: "500",
                   fontFamily: "Poppins, sans-serif",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: 60,
                 }}
               >
                 {fmtNum(
@@ -71,7 +90,10 @@ const CountDownClock = () => {
                 style={{
                   fontSize: 16,
                   fontFamily: "Poppins, sans-serif",
-                  display: "block",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: 20,
                 }}
               >
                 {label}
