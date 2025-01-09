@@ -1,8 +1,11 @@
 import React from "react";
 
-const ScheduleInfo = ({ time, title, description }) => {
+const ScheduleInfo = ({ time, title, description, style }) => {
   return (
-    <div className="scheduled-time-container-main col-md-10 mx-auto row">
+    <div
+      className="scheduled-time-container-main col-md-10 mx-auto row"
+      style={{ ...style, width: "304px" }}
+    >
       <div
         className="time-block col-md-2"
         style={{

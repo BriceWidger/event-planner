@@ -6,7 +6,7 @@ const RegisterNowButton = () => {
   return (
     <Link
       to="/tickets"
-      className="btn btn-primary ms-auto"
+      className="btn btn-primary ms-auto d-none d-lg-block"
       style={{ backgroundColor: "rgb(61, 104, 137)" }}
     >
       REGISTOR NOW
