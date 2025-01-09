@@ -8,9 +8,11 @@ const RegisterNowButton = () => {
       className="btn"
       style={{
         display: "inline-block",
+        width: "185.767px",
+        height: "58px",
         fontSize: "18px",
-        padding: "20px 34px",
-        lineHeight: "1",
+        padding: "0",
+        lineHeight: "58px",
         textDecoration: "none",
         cursor: "pointer",
         textAlign: "center",
