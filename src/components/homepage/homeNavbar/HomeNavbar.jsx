@@ -3,7 +3,7 @@ import React from "react";
 import Logo from "./Logo";
 import NavbarToggler from "./NavbarToggler";
 import NavbarLinks from "./NavbarLinks";
-import RegisterNowButton from "./RegisterNowButton";
+import RegisterNowButton from "./RegisterNowButtonNav";
 
 
 const HomeNavbar = () => {
