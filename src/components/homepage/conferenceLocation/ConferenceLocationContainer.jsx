@@ -7,7 +7,10 @@ const ConferenceLocationContainer = () => {
     <div
       id="conference-location-container-main"
       className="conference-location-container-main w-100 h-100vh bg-black d-flex justify-content-center"
-      style={{ height: "853.2px" }}
+      style={{
+        width: "320px",
+        height: "1006.4px",
+      }}
     >
       <div className="conference-location-container-middle w-100 d-flex justify-content-center align-items-center flex-column">
         <ConferenceLocationText />
