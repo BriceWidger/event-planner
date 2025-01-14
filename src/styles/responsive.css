@@ -1,9 +1,10 @@
-@media (max-width: 768px) {
-  .AnnualConferenceMainContainer {
+/* @media (max-width: 768px) {
+  .AnnualConferenceMainContainer-outer {
     max-width: 90vw;
   }
   .ec-editor-block h1 {
-    font-size: 3vw;
+    font-size: 6vw;
+    color: #ff0000;
   }
   .ec-editor-block p {
     font-size: 1.2rem;
@@ -12,3 +13,17 @@
     width: 80%;
   }
 }
+
+@media (max-width: 480px) {
+  .ec-editor-block h1 {
+    font-size: 5vw;
+    color: #00ff00;
+  }
+}
+
+@media (max-width: 320px) {
+  .ec-editor-block h1 {
+    font-size: 6vw;
+    color: #0000ff;
+  }
+} */

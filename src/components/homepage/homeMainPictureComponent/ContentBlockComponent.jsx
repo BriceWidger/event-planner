@@ -1,67 +1,78 @@
 import React from "react";
-import RegisterNowButton from "../RegisterNowButton";
+import styled from "styled-components";
 
+const AnnualConferenceTitle = styled.h1`
+  font-size: 80px;
+  font-family: "Unna", serif;
+  color: white;
+
+  @media (max-width: 768px) {
+    font-size: 6vw;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 5vw;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 6vw;
+  }
+`;
 const ContentBlockComponent = () => {
   return (
     <div
-      className="content-block-content position-absolute top-50 start-50 translate-middle text-center col-md-10 offset-md-1"
+      className="AnnualConferenceMainContainer-outer content-block-content position-absolute top-50 start-50 translate-middle text-center col-md-10"
       style={{
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        width: "80vw",
+        height: "100vh",
       }}
     >
       <div
-        className="AnnualConferenceMainContainer"
+        className="AnnualConferenceMainContainer-inner"
         style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          width: 304,
-          paddingLeft: 15,
-          paddingRight: 15,
+          justifyContent: "center",
+          textAlign: "center",
+          width: "80%",
+          paddingLeft: "2em",
+          paddingRight: "2em",
         }}
       >
-        <h1
-          className="ec-editor-block h1 mb-0"
-          style={{
-            fontSize: "16vw",
-            color: "#ffffff",
-            fontFamily: "'Unna', serif;",
-            width: 274,
-          }}
-        >
-          Annual Conference
-        </h1>
+        <AnnualConferenceTitle>Annual Conference</AnnualConferenceTitle>
         <p
           className="ec-editor-block subdued mb-4"
           style={{
             fontWeight: 400,
-            fontSize: "20px",
+            fontSize: "2.5vw", // Set font size to 2.5% of viewport width
             color: "#ffffff",
             lineHeight: "150%",
             fontFamily: "'Nunito Sans', sans-serif",
-            width: 274,
           }}
         >
           Join us on December 26
         </p>
         <div
-          className="register-now-btn-container"
+          className="register-now-btn-container text-center"
           style={{
-            width: 274,
+            width: "80%",
+            display: "flex",
+            justifyContent: "center",
           }}
         >
           <a
             className="btn"
             style={{
               display: "inline-block",
-              fontSize: "18px",
-              padding: "20px 34px",
+              fontSize: "1.2em",
+              padding: "1em 2em",
               lineHeight: "1",
               textDecoration: "none",
               cursor: "pointer",
-              textAlign: "center",
               borderRadius: "30px",
               backgroundColor: "#3d6889",
               color: "#ffffff",
