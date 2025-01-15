@@ -1,3 +1,10 @@
+
+1/14/25:
+
+Right now I'm having difficulty understanding if the text is supposed to get smaller or remain the same size when the screen shrinks with regards to RWD.
+
+------------
+
 1/10/25:
 
 I have came up with a gameplan. The game plan is to create breakpoints for the following sizes:

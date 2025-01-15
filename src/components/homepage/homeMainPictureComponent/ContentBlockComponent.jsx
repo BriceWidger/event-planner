@@ -1,67 +1,66 @@
+// ContentBlockComponent.js
 import React from "react";
 import styled from "styled-components";
+import "../../../styles/responsive.css";
 
-const AnnualConferenceTitle = styled.h1`
-  font-size: 80px;
-  font-family: "Unna", serif;
-  color: white;
-
-  @media (max-width: 768px) {
-    font-size: 6vw;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 5vw;
-  }
-
-  @media (max-width: 320px) {
-    font-size: 6vw;
-  }
+const BreakAllContainer = styled.div`
+  word-break: break-all;
 `;
+
 const ContentBlockComponent = () => {
   return (
-    <div
-      className="AnnualConferenceMainContainer-outer content-block-content position-absolute top-50 start-50 translate-middle text-center col-md-10"
+    <BreakAllContainer
+      className="AnnualConferenceMainContainer-outer content-block-content position-absolute top-50 start-50 translate-middle text-center d-flex justify-content-center align-items-center"
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "80vw",
+        width: "100vw",
         height: "100vh",
       }}
     >
       <div
-        className="AnnualConferenceMainContainer-inner"
+        className="AnnualConferenceMainContainer-inner d-flex flex-column justify-content-center align-items-center text-center"
         style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-          width: "80%",
-          paddingLeft: "2em",
-          paddingRight: "2em",
+          width: "100%",
         }}
       >
-        <AnnualConferenceTitle>Annual Conference</AnnualConferenceTitle>
-        <p
-          className="ec-editor-block subdued mb-4"
+        <div
+          className="d-flex flex-column justify-content-center align-items-center"
           style={{
-            fontWeight: 400,
-            fontSize: "2.5vw", // Set font size to 2.5% of viewport width
-            color: "#ffffff",
-            lineHeight: "150%",
-            fontFamily: "'Nunito Sans', sans-serif",
+            "@media (min-width: 768px)": {
+              width: "50%",
+            },
           }}
         >
-          Join us on December 26
-        </p>
+          <h1
+            style={{
+              color: "white",
+              margin: 0,
+              fontWeight: 400,
+              fontSize: "80px",
+              lineHeight: "110%",
+              fontFamily: " 'Unna', serif;",
+            }}
+          >
+            Annual Conference
+          </h1>
+          <p
+            className="text-center"
+            style={{
+              color: "#888",
+              fontWeight: 400,
+              fontSize: "16px",
+              lineHeight: "150%",
+              fontFamily: "'Nunito Sans', sans-serif",
+            }}
+          >
+            Join us on December 26
+          </p>
+        </div>
         <div
-          className="register-now-btn-container text-center"
+          className="register-now-btn-container text-center d-flex justify-content-center"
           style={{
-            width: "80%",
-            display: "flex",
-            justifyContent: "center",
+            "@media (min-width: 768px)": {
+              width: "50%",
+            },
           }}
         >
           <a
@@ -85,7 +84,7 @@ const ContentBlockComponent = () => {
           </a>
         </div>
       </div>
-    </div>
+    </BreakAllContainer>
   );
 };
 
