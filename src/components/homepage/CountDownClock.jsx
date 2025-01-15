@@ -19,87 +19,43 @@ const CountDownClock = () => {
   const fmtNum = (n) => n.toString().padStart(2, "0");
 
   return (
-    <div
-      className="countdown-container"
-      style={{
-        backgroundColor: "#e9e9e9",
-        padding: "17px 0",
-        height: 154,
-        display: "flex",
-        alignItems: "center",
-      }}
-    >
-      <div
-        className="countdown-container-block container text-center"
-        style={{
-          width: 304,
-          padding: "0 15px",
-          height: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <div
-          className="row d-flex justify-content-center"
-          style={{
-            margin: "0 auto",
-          }}
-        >
-          {["days", "hours", "minutes", "seconds"].map((label, i) => (
-            <div
-              key={i}
-              className="col-md-3 col-xs-3 mb-2"
-              style={{
-                textAlign: "center",
-                flex: 1,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                width: 76,
-                padding: "0 5px",
-              }}
-            >
-              <div
-                className="h1"
-                style={{
-                  fontSize: 40,
-                  margin: 0,
-                  fontWeight: "500",
-                  fontFamily: "Poppins, sans-serif",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  height: 60,
-                }}
-              >
-                {fmtNum(
-                  cd[
-                    label === "days"
-                      ? "d"
-                      : label === "hours"
-                      ? "h"
-                      : label === "minutes"
-                      ? "m"
-                      : "s"
-                  ]
-                )}
-              </div>
-              <span
-                style={{
-                  fontSize: 16,
-                  fontFamily: "Poppins, sans-serif",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  height: 20,
-                }}
-              >
-                {label}
-              </span>
+    <div>
+      <style>
+        {`
+          @media (min-width: 790px) {
+            .row.stop-expanding {
+              max-width: 790px;
+              margin: 0 auto;
+            }
+          }
+        `}
+      </style>
+      <div className="container-fluid" style={{ backgroundColor: "#e9e9e9", padding: "17px 0" }}>
+        <div className="row stop-expanding justify-content-center text-center">
+          <div className="col-md-2 col-md-offset-2 col-xs-3" style={{ width: '25%' }}>
+            <div className="h1" style={{ fontSize: 60 }}>
+              {fmtNum(cd.d)}
             </div>
-          ))}
+            days
+          </div>
+          <div className="col-md-2 col-md-offset-2 col-xs-3" style={{ width: '25%' }}>
+            <div className="h1" style={{ fontSize: 60 }}>
+              {fmtNum(cd.h)}
+            </div>
+            hours
+          </div>
+          <div className="col-md-2 col-md-offset-2 col-xs-3" style={{ width: '25%' }}>
+            <div className="h1" style={{ fontSize: 60 }}>
+              {fmtNum(cd.m)}
+            </div>
+            minutes
+          </div>
+          <div className="col-md-2 col-md-offset-2 col-xs-3" style={{ width: '25%' }}>
+            <div className="h1" style={{ fontSize: 60 }}>
+              {fmtNum(cd.s)}
+            </div>
+            seconds
+          </div>
         </div>
       </div>
     </div>
