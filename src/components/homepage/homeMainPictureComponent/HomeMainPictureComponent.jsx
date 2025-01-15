@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import "../../../styles/responsive.css";
 
 const BreakAllContainer = styled.div`
   word-break: break-all;
@@ -8,17 +7,38 @@ const BreakAllContainer = styled.div`
 
 const HomeMainPictureComponent = () => {
   return (
-    <div className="container-fluid p-0 position-relative">
+    <div
+      className="container-fluid p-0 position-relative"
+      style={{ height: "100%" }}
+    >
       <div
         style={{
-          backgroundImage: `url(https://res.cloudinary.com/eventcreate/image/upload/v1575668151/themes/theme%20assets/photo-1515006346612-71f85b11e4fe_ak5ufw.jpg)`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          filter: "brightness(0.5)",
           padding: "20px",
+          width: "100%",
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
         }}
+        className="background-container"
       >
+        <div
+          className="background-image"
+          style={{
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundImage: `url(https://res.cloudinary.com/eventcreate/image/upload/v1575668151/themes/theme%20assets/photo-1515006346612-71f85b11e4fe_ak5ufw.jpg)`,
+            filter: "brightness(0.5)",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            zIndex: -1,
+          }}
+        />
         <BreakAllContainer
           className="AnnualConferenceMainContainer-outer content-block-content position-relative text-center d-flex justify-content-center align-items-center"
           style={{
@@ -42,7 +62,7 @@ const HomeMainPictureComponent = () => {
             >
               <h1
                 style={{
-                  color: "white",
+                  color: "#ffffff",
                   margin: 0,
                   fontWeight: 400,
                   fontSize: "80px",
