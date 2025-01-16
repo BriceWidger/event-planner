@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../../styles/responsive.css";
+import './CountDownClock.css';
 
 const CountDownClock = () => {
   const [cd, setCD] = useState({ d: 2, h: 20, m: 1, s: 26 });
@@ -21,41 +21,47 @@ const CountDownClock = () => {
 
   return (
     <div>
-      <div
-        className="container-fluid"
-        style={{ backgroundColor: "#e9e9e9", padding: "17px 0" }}
-      >
+      <div className="container-fluid" style={{ backgroundColor: "#e9e9e9", padding: "17px 0" }}>
         <div className="row stop-expanding justify-content-center text-center">
-          <div className="clock-digit-container">
+        <div className="clock-digit-container">
             <div>
               <div className="clock-digit">
                 <span>{fmtNum(cd.d)[0]}</span>
                 <span>{fmtNum(cd.d)[1]}</span>
               </div>
-              <div>days</div>
+              <div>
+                days
+              </div>
             </div>
             <div>
               <div className="clock-digit">
                 <span>{fmtNum(cd.h)[0]}</span>
                 <span>{fmtNum(cd.h)[1]}</span>
               </div>
-              <div>hours</div>
+              <div>
+                hours
+              </div>
             </div>
             <div>
               <div className="clock-digit">
                 <span>{fmtNum(cd.m)[0]}</span>
                 <span>{fmtNum(cd.m)[1]}</span>
               </div>
-              <div>minutes</div>
+              <div>
+                minutes
+              </div>
             </div>
             <div>
               <div className="clock-digit">
                 <span>{fmtNum(cd.s)[0]}</span>
                 <span>{fmtNum(cd.s)[1]}</span>
               </div>
-              <div>seconds</div>
+              <div>
+                seconds
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>

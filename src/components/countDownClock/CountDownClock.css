@@ -1,13 +1,27 @@
-.break-all-container {
+/*
+ * CountDownClock.css
+ * Styles for the CountDownClock component
+ */
+
+/* Clock digits */
+.clock-digit {
   word-break: break-all;
+  font-size: 60px;
 }
 
+.clock-digit-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Responsive design */
 @media (min-width: 790px) {
   .row.stop-expanding {
     max-width: 790px;
     margin: 0 auto;
   }
 }
+
 @media (max-width: 443px) {
   .row.stop-expanding {
     flex-direction: column;
@@ -18,23 +32,18 @@
   }
   .clock-digit-container {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .clock-digit {
-    display: flex;
-    flex-direction: column;
+    margin: 10px;
   }
 }
+
 @media (min-width: 444px) {
   .clock-digit-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
-  .clock-digit {
-    margin-right: 20px;
-  }
-}
-.clock-digit {
-  font-size: 60px;
 }
