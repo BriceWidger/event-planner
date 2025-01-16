@@ -7,20 +7,25 @@ const KeynoteSpeakers = () => (
     className="container-fluid d-flex align-items-center"
     style={{ paddingTop: "70px", paddingBottom: "84px" }}
   >
-    <div className="container-fluid vw-100 p-0 m-0">
+    <div className="container-fluid p-0 m-0">
       <div className="w-100 d-flex justify-content-center">
         <div className="col-md-8 col-lg-6">
           <div
             className="keynote-title-container"
-            style={{ width: 304, padding: "0 15px" }}
+            style={{
+              maxWidth: "100%",
+              padding: "0 15px",
+            }}
           >
             <h1
               className="keynote-title text-center display-4"
               style={{
-                fontWeight: "400",
-                lineHeight: "110%",
+                fontSize: "52px",
                 fontFamily: "'Unna', serif",
-                fontSize: "46px",
+                fontWeight: 400,
+                margin: 0,
+                lineHeight: "110%",
+                wordBreak: "break-all",
               }}
             >
               Keynote Speakers
@@ -29,10 +34,11 @@ const KeynoteSpeakers = () => (
               className="keynote-subtitle text-center"
               style={{
                 fontWeight: 400,
-                fontSize: 16,
+                fontSize: "16px",
                 lineHeight: "150%",
                 fontFamily: "'Nunito Sans', sans-serif",
                 color: "#888",
+                wordBreak: "break-word",
               }}
             >
               We are extremely excited to showcase the lineup of impressive
@@ -77,16 +83,21 @@ const KeynoteSpeakers = () => (
           />
         </div>
       </section>
-      <div
-        className="speaker-invitation-container"
-        style={{ width: 304, padding: "0 15px", margin: "0 auto" }}
-      >
-        <div className="col-md-8 col-lg-6 mx-auto" style={{ width: 274 }}>
-          <strong>Interested in speaking at the event?</strong> Aliquam erat
-          volutpat. Aenean id enim ut nisi consequat venenatis. Phasellus cursus
-          ipsum at nunc placerat auctor. Curabitur lorem arcu, lacinia nec
-          consequat vitae, pellentesque rhoncus sapien. Nunc a eros massa.
-          Phasellus massa enim, egestas quis viverra et, porta eget dui.
+      <div className="speaker-invitation-container container-fluid p-0 m-0">
+        <div className="row justify-content-center">
+          <div
+            className="col-md-8 col-lg-6 mx-auto text-center"
+            style={{ wordBreak: "break-all" }}
+          >
+            <strong>Interested in speaking at the event?</strong>
+            <p className="text-break">
+              Aliquam erat volutpat. Aenean id enim ut nisi consequat venenatis.
+              Phasellus cursus ipsum at nunc placerat auctor. Curabitur lorem
+              arcu, lacinia nec consequat vitae, pellentesque rhoncus sapien.
+              Nunc a eros massa. Phasellus massa enim, egestas quis viverra et,
+              porta eget dui.
+            </p>
+          </div>
         </div>
       </div>
     </div>

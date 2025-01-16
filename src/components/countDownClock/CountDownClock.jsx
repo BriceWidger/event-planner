@@ -61,7 +61,6 @@ const CountDownClock = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
