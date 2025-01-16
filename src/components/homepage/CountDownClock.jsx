@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../../styles/responsive.css";
 
 const CountDownClock = () => {
   const [cd, setCD] = useState({ d: 2, h: 20, m: 1, s: 26 });
@@ -20,41 +21,40 @@ const CountDownClock = () => {
 
   return (
     <div>
-      <style>
-        {`
-          @media (min-width: 790px) {
-            .row.stop-expanding {
-              max-width: 790px;
-              margin: 0 auto;
-            }
-          }
-        `}
-      </style>
-      <div className="container-fluid" style={{ backgroundColor: "#e9e9e9", padding: "17px 0" }}>
+      <div
+        className="container-fluid"
+        style={{ backgroundColor: "#e9e9e9", padding: "17px 0" }}
+      >
         <div className="row stop-expanding justify-content-center text-center">
-          <div className="col-md-2 col-md-offset-2 col-xs-3" style={{ width: '25%' }}>
-            <div className="h1" style={{ fontSize: 60 }}>
-              {fmtNum(cd.d)}
+          <div className="clock-digit-container">
+            <div>
+              <div className="clock-digit">
+                <span>{fmtNum(cd.d)[0]}</span>
+                <span>{fmtNum(cd.d)[1]}</span>
+              </div>
+              <div>days</div>
             </div>
-            days
-          </div>
-          <div className="col-md-2 col-md-offset-2 col-xs-3" style={{ width: '25%' }}>
-            <div className="h1" style={{ fontSize: 60 }}>
-              {fmtNum(cd.h)}
+            <div>
+              <div className="clock-digit">
+                <span>{fmtNum(cd.h)[0]}</span>
+                <span>{fmtNum(cd.h)[1]}</span>
+              </div>
+              <div>hours</div>
             </div>
-            hours
-          </div>
-          <div className="col-md-2 col-md-offset-2 col-xs-3" style={{ width: '25%' }}>
-            <div className="h1" style={{ fontSize: 60 }}>
-              {fmtNum(cd.m)}
+            <div>
+              <div className="clock-digit">
+                <span>{fmtNum(cd.m)[0]}</span>
+                <span>{fmtNum(cd.m)[1]}</span>
+              </div>
+              <div>minutes</div>
             </div>
-            minutes
-          </div>
-          <div className="col-md-2 col-md-offset-2 col-xs-3" style={{ width: '25%' }}>
-            <div className="h1" style={{ fontSize: 60 }}>
-              {fmtNum(cd.s)}
+            <div>
+              <div className="clock-digit">
+                <span>{fmtNum(cd.s)[0]}</span>
+                <span>{fmtNum(cd.s)[1]}</span>
+              </div>
+              <div>seconds</div>
             </div>
-            seconds
           </div>
         </div>
       </div>
