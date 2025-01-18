@@ -13,7 +13,7 @@ const HomeMainPictureComponent = () => {
     >
       <div
         style={{
-          padding: "20px",
+          padding: "180.38px 20px 280px 20px",
           width: "100%",
           minHeight: "100vh",
           display: "flex",
@@ -68,6 +68,9 @@ const HomeMainPictureComponent = () => {
                   fontSize: "80px",
                   lineHeight: "110%",
                   fontFamily: " 'Unna', serif;",
+                  "@media (max-width: 677px)": {
+                    color: "red",
+                  },
                 }}
               >
                 Annual Conference
