@@ -3,23 +3,31 @@ import React from "react";
 const ScheduleInfo = ({ time, title, description, style }) => {
   return (
     <div
-      className="scheduled-time-container-main col-md-10 mx-auto row"
-      style={{ ...style, width: "304px" }}
+      className="scheduled-time-container-main col-12 row"
+      style={{ ...style }}
     >
       <div
-        className="time-block col-md-2"
+        className="time-block col-12 col-md-2"
         style={{
           fontWeight: "bold",
           fontSize: "18px",
           lineHeight: "110%",
           color: "#3d6889",
           fontFamily: "'Poppins', sans-serif",
+          wordBreak: "break-all",
         }}
       >
         {time}
       </div>
-      <div className="col col-md-10">
-        <h3 className="col">{title}</h3>
+      <div className="col col-12 col-md-10">
+        <h3
+          className="col"
+          style={{
+            wordBreak: "break-all",
+          }}
+        >
+          {title}
+        </h3>
         <p
           style={{
             color: "#888",
@@ -27,6 +35,7 @@ const ScheduleInfo = ({ time, title, description, style }) => {
             fontSize: "16px",
             lineHeight: "150%",
             fontFamily: "'Nunito Sans', sans-serif",
+            wordBreak: "break-all",
           }}
         >
           {description}

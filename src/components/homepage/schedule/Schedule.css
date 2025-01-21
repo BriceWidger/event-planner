@@ -1,0 +1,9 @@
+@media (max-width: 991px) {
+  .scheduled-time-container-main {
+    flex-direction: column;
+  }
+  .time-block {
+    max-width: 1170px;
+    width: 100%;
+  }
+}
