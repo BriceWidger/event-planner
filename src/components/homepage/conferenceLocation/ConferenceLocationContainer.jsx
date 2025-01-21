@@ -1,6 +1,7 @@
 import React from "react";
 import ConferenceLocationText from "./ConferenceLocationText";
 import ConferenceLocationMap from "./ConferenceLocationMap";
+import "./ConferenceLocation.css";
 
 const ConferenceLocationContainer = () => {
   return (
@@ -9,7 +10,8 @@ const ConferenceLocationContainer = () => {
       className="conference-location-container-main w-100 h-100vh bg-black d-flex justify-content-center"
       style={{
         width: "320px",
-        height: "1006.4px",
+        paddingTop: "70px",
+        paddingBottom: "120px",
       }}
     >
       <div className="conference-location-container-middle w-100 d-flex justify-content-center align-items-center flex-column">

@@ -1,0 +1,14 @@
+@media (max-width: 991px) {
+  .conference-location-container-middle > * {
+    max-width: 750px;
+  }
+  .conference-location-text-wrap {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .conference-location-container-middle {
+    max-width: 1170px;
+  }
+}
