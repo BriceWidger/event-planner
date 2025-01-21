@@ -5,7 +5,9 @@ import "./Schedule.css";
 
 const Schedule = () => {
   return (
-    <Container style={{ paddingTop: "70px", paddingBottom: "84px" }}>
+    <Container style={{ paddingTop: "70px", paddingBottom: "84px",
+      maxWidth: "1140px",
+     }}>
       <div
         id="schedule-container-middle"
         className="schedule-container d-flex justify-content-center align-items-center"
@@ -25,6 +27,7 @@ const Schedule = () => {
             style={{
               fontSize: "52px",
               marginBottom: "30px",
+              paddingLeft: "12px",
               paddingRight: "12px",
               wordBreak: "break-all",
               "@media (min-width: 768px)": {

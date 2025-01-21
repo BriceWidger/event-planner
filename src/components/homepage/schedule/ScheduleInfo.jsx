@@ -19,11 +19,11 @@ const ScheduleInfo = ({ time, title, description, style }) => {
       >
         {time}
       </div>
-      <div className="col col-12 col-md-10">
+      <div className="title-description-block col col-12 col-md-10">
         <h3
           className="col"
           style={{
-            wordBreak: "break-all",
+            wordBreak: "break-word",
           }}
         >
           {title}
@@ -35,7 +35,7 @@ const ScheduleInfo = ({ time, title, description, style }) => {
             fontSize: "16px",
             lineHeight: "150%",
             fontFamily: "'Nunito Sans', sans-serif",
-            wordBreak: "break-all",
+            wordBreak: "break-word",
           }}
         >
           {description}

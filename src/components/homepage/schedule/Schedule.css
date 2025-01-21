@@ -2,8 +2,10 @@
   .scheduled-time-container-main {
     flex-direction: column;
   }
-  .time-block {
-    max-width: 1170px;
+  .scheduled-time-container-main {
+    margin: 0 auto;
+  }
+  .title-description-block {
     width: 100%;
   }
 }
