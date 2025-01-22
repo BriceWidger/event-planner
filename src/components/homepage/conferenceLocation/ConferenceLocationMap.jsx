@@ -3,9 +3,8 @@ import React from "react";
 const ConferenceLocationMap = () => {
   return (
     <div
-      className="col-md-12 fr-inner d-flex justify-content-center"
+      className="map-container col-md-12 fr-inner d-flex justify-content-center"
       style={{
-        width: "100%",
         paddingLeft: "15px",
         paddingRight: "15px",
       }}

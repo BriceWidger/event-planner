@@ -1,14 +1,88 @@
-@media (max-width: 991px) {
-  .conference-location-container-middle > * {
-    max-width: 750px;
+/* Large screens */
+@media (min-width: 1200px) {
+  .conference-location-container-middle {
+    max-width: 1170px;
+  }
+  .map-container {
+    width: 940px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .conference-location-text-wrap {
-    max-width: 750px;
+    width: 940px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-@media (min-width: 992px) {
+/* Medium screens */
+@media (min-width: 992px) and (max-width: 1199px) {
   .conference-location-container-middle {
-    max-width: 1170px;
+    max-width: 970px;
+  }
+  .map-container {
+    width: 860px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .conference-location-text-wrap {
+    width: 860px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Small screens */
+@media (min-width: 768px) and (max-width: 991px) {
+  .conference-location-container-middle {
+    max-width: 750px;
+  }
+  .map-container {
+    width: 660.65px;
+  }
+  .conference-location-text-wrap {
+    width: 660.65px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 767px) {
+  .conference-location-container-middle {
+    max-width: 100%;
+  }
+  .map-container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .conference-location-text-wrap {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 479px) {
+  .conference-location-container-middle {
+    max-width: 100%;
+  }
+  .map-container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .conference-location-text-wrap {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
