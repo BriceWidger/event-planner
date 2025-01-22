@@ -5,21 +5,28 @@ import "./Schedule.css";
 
 const Schedule = () => {
   return (
-    <Container style={{ paddingTop: "70px", paddingBottom: "84px",
-      maxWidth: "1140px",
-     }}>
+    <Container
+      className="px-0"
+      style={{
+        paddingTop: "70px",
+        paddingBottom: "84px",
+        maxWidth: "1140px",
+      }}
+    >
       <div
         id="schedule-container-middle"
-        className="schedule-container d-flex justify-content-center align-items-center"
+        className="schedule-container d-flex justify-content-center align-items-center mx-auto"
         style={{
           fontFamily: "'Unna', serif",
+          padding: "0 15px",
         }}
       >
         <div
           className="schedule-content"
           style={{
             overflowY: "auto",
-            margin: "auto",
+            maxWidth: "1140px",
+            margin: "0 auto",
           }}
         >
           <h1
