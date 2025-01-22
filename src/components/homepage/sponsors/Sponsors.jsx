@@ -4,20 +4,10 @@ import SponsorsLogos from "./SponsorsLogos";
 
 const Sponsors = () => {
   return (
-    <section
-      id="sponsors-container-main"
-      className="sponsors-container-main mx-auto d-flex justify-content-center align-items-center"
-      style={{
-        height: "461.2px",
-        maxHeight: "100vh",
-        overflow: "auto",
-      }}
-    >
-      <div className="content-block-content d-flex justify-content-center align-items-center">
-        <div className="container text-center">
-          <SponsorsTitle />
-          <SponsorsLogos />
-        </div>
+    <section id="sponsors-container-main" className="sponsors-container-main py-5">
+      <div className="container text-center">
+        <SponsorsTitle />
+        <SponsorsLogos />
       </div>
     </section>
   );

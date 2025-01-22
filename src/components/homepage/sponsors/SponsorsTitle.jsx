@@ -2,25 +2,34 @@ import React from "react";
 
 const SponsorsTitle = () => {
   return (
-    <div className="text-center d-flex flex-column align-items-center">
+    <div className="text-center mb-5">
       <h2
-        className="display-4 font-weight-bold mb-4"
+        className="display-4 font-weight-bold"
         style={{
           fontSize: "52px",
           fontFamily: "'Unna', serif",
           fontWeight: "400",
+          margin: "0",
           lineHeight: "110%",
+          wordBreak: "break-all",
         }}
       >
         Sponsors
       </h2>
-      <div style={{ height: "16px" }}></div>
       <p
-        className="lead text-muted"
+        className="sponsor-information lead text-muted"
         style={{
+          color: "#888",
+          fontWeight: "400",
           fontSize: "16px",
           lineHeight: "150%",
           fontFamily: "'Nunito Sans', sans-serif",
+          margin: "0",
+          padding: "0",
+          boxSizing: "border-box",
+          textAlign: "center",
+          wordWrap: "break-word",
+          fontStyle: "normal",
         }}
       >
         Cras posuere non dui eu tincidunt. Maecenas congue dignissim tortor,
@@ -30,7 +39,6 @@ const SponsorsTitle = () => {
         Nunc sit amet imperdiet tellus. Ut lacinia odio urna, non eleifend odio
         porttitor in. Fusce vitae dictum dui, at cursus enim.
       </p>
-      <div style={{ height: "70px" }}></div>
     </div>
   );
 };
