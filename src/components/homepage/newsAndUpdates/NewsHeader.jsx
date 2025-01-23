@@ -4,7 +4,7 @@ import React from "react";
 const NewsHeader = () => {
   return (
     <div className="row text-center">
-      <div className="col-md-8 offset-md-2">
+      <div className="title-paragragh col-md-8 offset-md-2">
         <h2
           style={{
             fontSize: "52px",
@@ -12,6 +12,7 @@ const NewsHeader = () => {
             fontWeight: 400,
             margin: 0,
             lineHeight: "110%",
+            wordBreak: "break-all",
           }}
           className="mb-4"
         >
@@ -25,6 +26,7 @@ const NewsHeader = () => {
             lineHeight: "150%",
             fontFamily: "'Nunito Sans', sans-serif",
             textAlign: "center",
+            wordBreak: "break-all",
           }}
           className="mb-5"
         >
@@ -36,6 +38,7 @@ const NewsHeader = () => {
               lineHeight: "150%",
               fontFamily: "'Nunito Sans', sans-serif",
               textAlign: "center",
+              wordBreak: "break-all",
             }}
           >
             Cras posuere non dui eu tincidunt. Maecenas congue dignissim tortor,

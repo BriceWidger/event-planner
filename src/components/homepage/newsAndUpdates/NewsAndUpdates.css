@@ -1,0 +1,7 @@
+@media (min-width: 768px) and (max-width: 991px) {
+    .title-paragragh {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }

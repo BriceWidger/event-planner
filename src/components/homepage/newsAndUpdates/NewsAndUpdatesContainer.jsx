@@ -2,6 +2,7 @@
 import React from "react";
 import NewsHeader from "./NewsHeader";
 import NewsList from "./NewsList";
+import './NewsAndUpdates.css';
 
 const NewsAndUpdatesContainer = () => {
   return (

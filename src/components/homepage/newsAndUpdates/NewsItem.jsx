@@ -13,6 +13,7 @@ const NewsItem = ({ image, title, date, text }) => {
             fontWeight: "bold",
             fontSize: "20px",
             lineHeight: "110%",
+            wordBreak: "break-all",
           }}
           className="mb-3"
         >
@@ -26,6 +27,7 @@ const NewsItem = ({ image, title, date, text }) => {
             fontSize: "14px",
             margin: 0,
             lineHeight: "200%",
+            wordBreak: "break-all",
           }}
           className="mb-3"
         >
@@ -38,6 +40,7 @@ const NewsItem = ({ image, title, date, text }) => {
             fontSize: "16px",
             lineHeight: "150%",
             fontFamily: "'Nunito Sans', sans-serif",
+            wordBreak: "break-all",
           }}
         >
           {text}
