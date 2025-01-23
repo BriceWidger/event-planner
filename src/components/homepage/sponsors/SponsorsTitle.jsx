@@ -9,7 +9,7 @@ const SponsorsTitle = () => {
           fontSize: "52px",
           fontFamily: "'Unna', serif",
           fontWeight: "400",
-          margin: "0",
+          margin: "0 0 16px 0",
           lineHeight: "110%",
           wordBreak: "break-all",
         }}
@@ -24,12 +24,13 @@ const SponsorsTitle = () => {
           fontSize: "16px",
           lineHeight: "150%",
           fontFamily: "'Nunito Sans', sans-serif",
-          margin: "0",
-          padding: "0",
+          margin: "0 auto",
+          padding: "0 15px",
           boxSizing: "border-box",
           textAlign: "center",
           wordWrap: "break-word",
           fontStyle: "normal",
+          maxWidth: "750px",
         }}
       >
         Cras posuere non dui eu tincidunt. Maecenas congue dignissim tortor,
