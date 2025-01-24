@@ -8,19 +8,16 @@ const RegisterNowButton = () => {
       className="btn"
       style={{
         display: "inline-block",
-        width: "185.767px",
-        height: "58px",
-        fontSize: "18px",
-        padding: "0",
-        lineHeight: "58px",
+        fontSize: "1.2em",
+        padding: "1em 2em",
+        lineHeight: "1",
         textDecoration: "none",
         cursor: "pointer",
-        textAlign: "center",
         borderRadius: "30px",
         backgroundColor: "#3d6889",
-        color: "#fff",
-        fontWeight: "600",
-        transition: ".2s all ease",
+        color: "#ffffff",
+        fontWeight: 600,
+        transition: "0.2s",
       }}
     >
       Register Now

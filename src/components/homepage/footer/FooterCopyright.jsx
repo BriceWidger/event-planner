@@ -10,15 +10,19 @@ const FooterCopyright = () => {
         lineHeight: "150%",
         fontFamily: "'Nunito Sans', sans-serif",
         paddingTop: "100px",
+        wordBreak: "break-all",
       }}
     >
       &copy; 2024. All Rights Reserved. <br />
-      Event website powered by{" "}
+      <span style={{ wordBreak: "break-all" }}>
+        Event website powered by{" "}
+      </span>
       <a
         rel="nofollow"
         href="https://www.eventcreate.com/"
         target="_blank"
         id="ec_link"
+        style={{ wordBreak: "break-all" }}
       >
         EventCreate
       </a>

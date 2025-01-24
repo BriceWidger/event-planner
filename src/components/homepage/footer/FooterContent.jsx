@@ -5,7 +5,7 @@ const FooterContent = () => {
     <div className="container text-center">
       <div className="container-inner">
         <div className="row">
-          <div className="col-md-8 offset-md-2">
+          <div className="">
             <p
               className="text-white"
               style={{
@@ -13,9 +13,11 @@ const FooterContent = () => {
                 fontWeight: 400,
                 fontSize: 13,
                 lineHeight: "150%",
-                fontFamily: "'Nunito Sans', sans-serif",
+                fonStFamily: "'Nunito Sans', sans-serif",
                 color: "#888",
                 opacity: "0.8",
+                wordBreak: "break-all",
+                maxWidth: "750px",
               }}
             >
               Integer fermentum tempor quam in hendrerit. Quisque non augue
