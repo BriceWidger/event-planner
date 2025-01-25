@@ -13,7 +13,7 @@ const NewsAndUpdatesContainer = () => {
         flex: 1,
         backgroundColor: "#eaeaea",
         overflow: "hidden",
-        padding: "2rem",
+        padding: "0 15px",
       }}
     >
       <div

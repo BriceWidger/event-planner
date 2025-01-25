@@ -19,6 +19,7 @@ const ConferenceLocationText = () => {
           fontFamily: "'Unna', serif",
           margin: 0,
           lineHeight: "110%",
+          wordBreak: "break-all",
         }}
       >
         Conference Location

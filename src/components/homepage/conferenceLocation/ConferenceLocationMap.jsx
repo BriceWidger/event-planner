@@ -5,8 +5,7 @@ const ConferenceLocationMap = () => {
     <div
       className="map-container col-md-12 fr-inner d-flex justify-content-center"
       style={{
-        paddingLeft: "15px",
-        paddingRight: "15px",
+        padding: "0 20px",
       }}
     >
       <iframe

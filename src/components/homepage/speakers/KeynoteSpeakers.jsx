@@ -87,7 +87,7 @@ const KeynoteSpeakers = () => (
         <div className="row justify-content-center">
           <div
             className="col-md-8 col-lg-6 mx-auto text-center"
-            style={{ wordBreak: "break-all" }}
+            style={{ wordBreak: "break-all",     padding: "0 20px", }}
           >
             <strong>Interested in speaking at the event?</strong>
             <p className="text-break">

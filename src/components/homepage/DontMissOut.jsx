@@ -31,12 +31,13 @@ const DontMissOut = () => {
             zIndex: -1,
           }}
         />
-        <div
-          className="text-center text-white"
-          style={{
-            maxWidth: "400px",
-          }}
-        >
+<div
+  className="text-center text-white"
+  style={{
+    maxWidth: "400px",
+    padding: "0 20px",
+  }}
+>
           <h1
             className="display-1 font-weight-normal"
             style={{

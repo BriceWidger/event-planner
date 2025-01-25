@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="content-block-bg"></div>
       <div
         className="main-content-container content-block-content text-center"
-        style={{ paddingTop: 80, paddingBottom: 120 }}
+        style={{ paddingTop: 80, paddingBottom: 120, paddingLeft: "15px", paddingRight: "15px" }}
       >
         <FooterContent />
         <FooterCallToAction />
