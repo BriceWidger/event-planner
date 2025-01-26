@@ -7,14 +7,16 @@ import ConfirmationPage from "./components/confirmationpage/ConfirmationPage";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route exact path="/" element={<HomePage />} />
-        <Route exact path="/tickets" element={<TicketsPage />} />
-        <Route exact path="/details" element={<DetailsPage />} />
-        <Route exact path="/confirmation" element={<ConfirmationPage />} />
-      </Routes>
-    </BrowserRouter>
+    <div style={{ overflow: "hidden" }}>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/tickets" element={<TicketsPage />} />
+          <Route exact path="/details" element={<DetailsPage />} />
+          <Route exact path="/confirmation" element={<ConfirmationPage />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
