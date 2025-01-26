@@ -6,9 +6,14 @@ import FooterCallToAction from "./FooterCallToAction";
 const Footer = () => {
   return (
     <div
-      className="footer-container-main content-block content-block-footer bg-black d-flex justify-content-center align-items-center"
+      className="footer-container-main content-block content-block-footer bg-black"
       data-block-type="footer"
       id="footer1"
+      style={{
+        display: "block",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
     >
       <div className="content-block-bg"></div>
       <div

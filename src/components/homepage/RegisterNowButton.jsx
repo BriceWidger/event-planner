@@ -18,6 +18,7 @@ const RegisterNowButton = () => {
         color: "#ffffff",
         fontWeight: 600,
         transition: "0.2s",
+        wordBreak: "break-all",
       }}
     >
       Register Now

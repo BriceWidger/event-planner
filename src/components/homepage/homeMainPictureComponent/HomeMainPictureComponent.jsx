@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import RegisterNowButton from "../RegisterNowButton";
 
 const BreakAllContainer = styled.div`
   word-break: break-all;
@@ -47,7 +48,7 @@ const HomeMainPictureComponent = () => {
           }}
         >
           <div
-            className="AnnualConferenceMainContainer-inner d-flex flex-column justify-content-center align-items-center text-center"
+            className="AnnualConferenceMainContainer-inner flex-column justify-content-center align-items-center text-center"
             style={{
               width: "100%",
             }}
@@ -96,25 +97,7 @@ const HomeMainPictureComponent = () => {
                 },
               }}
             >
-              <a
-                className="btn"
-                style={{
-                  display: "inline-block",
-                  fontSize: "1.2em",
-                  padding: "1em 2em",
-                  lineHeight: "1",
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  borderRadius: "30px",
-                  backgroundColor: "#3d6889",
-                  color: "#ffffff",
-                  fontWeight: 600,
-                  transition: "0.2s",
-                }}
-                href="/tickets"
-              >
-                Register Now
-              </a>
+              <RegisterNowButton />
             </div>
           </div>
         </BreakAllContainer>

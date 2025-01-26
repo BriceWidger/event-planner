@@ -3,17 +3,18 @@ import RegisterNowButton from "./RegisterNowButton";
 
 const DontMissOut = () => {
   return (
-    <div className="dontmissout-container position-relative">
+    <div
+      className="dontmissout-container position-relative h-100"
+      style={{ height: "100%" }}
+    >
       <div
-        className="dontmissout-bg-img img-fluid w-100 h-100 m-0"
+        className="dontmissout-bg-img img-fluid w-100 h-100 m-0 justify-content-center align-items-center"
         style={{
+          display: "block",
           minHeight: "331.2px",
-          height: "100vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
           paddingTop: "70px",
           paddingBottom: "80px",
+          flexGrow: 1,
         }}
       >
         <div
@@ -31,13 +32,14 @@ const DontMissOut = () => {
             zIndex: -1,
           }}
         />
-<div
-  className="text-center text-white"
-  style={{
-    maxWidth: "400px",
-    padding: "0 20px",
-  }}
->
+        <div
+          className="text-center text-white"
+          style={{
+            padding: "0 20px",
+            wordBreak: "break-all",
+            flexGrow: 1,
+          }}
+        >
           <h1
             className="display-1 font-weight-normal"
             style={{
@@ -58,26 +60,7 @@ const DontMissOut = () => {
           >
             Register by December 26 . We look forward to seeing you there.
           </p>
-          <a
-            className="btn"
-            style={{
-              display: "inline-block",
-              fontSize: "1.2em",
-              padding: "1em 2em",
-              lineHeight: "1",
-              textDecoration: "none",
-              cursor: "pointer",
-              borderRadius: "30px",
-              backgroundColor: "#3d6889",
-              color: "#ffffff",
-              fontWeight: 600,
-              transition: "0.2s",
-              wordBreak: "break-all",
-            }}
-            href="/tickets"
-          >
-            Register Now
-          </a>
+          <RegisterNowButton />
         </div>
       </div>
     </div>
