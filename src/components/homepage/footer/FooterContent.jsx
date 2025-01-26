@@ -9,7 +9,8 @@ const FooterContent = () => {
             <p
               className="text-white"
               style={{
-                marginBottom: 32,
+                margin: "0px auto 32px",
+                textAlign: "center",
                 fontWeight: 400,
                 fontSize: 13,
                 lineHeight: "150%",
