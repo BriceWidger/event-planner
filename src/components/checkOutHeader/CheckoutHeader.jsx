@@ -24,7 +24,15 @@ const CheckoutHeader = () => {
         </span>
       </div>
       <div className="d-flex flex-grow-1 justify-content-center">
-        <div className="btn-breadcrumb d-inline-flex align-items-center">
+        <div
+          className="btn-breadcrumb d-inline-flex align-items-center flex-wrap"
+          style={{
+            "@media (max-width: 768px)": {
+              flexDirection: "column",
+              alignItems: "center",
+            },
+          }}
+        >
           <Link to="/">
             <img
               src="/images/home-icon.png"
@@ -34,18 +42,69 @@ const CheckoutHeader = () => {
               }}
             />
           </Link>
-          <ArrowDivider />
-          <span className="fw-bold" style={{ fontSize: "12px" }}>
-            Tickets
-          </span>
-          <ArrowDivider />
-          <span className="fw-bold" style={{ fontSize: "12px" }}>
-            Details
-          </span>
-          <ArrowDivider />
-          <span className="fw-bold" style={{ fontSize: "12px" }}>
-            Confirmation
-          </span>
+          <div className="d-inline-flex align-items-center">
+            <ArrowDivider
+              style={{
+                "@media (max-width: 768px)": {
+                  fontSize: "20px",
+                  marginTop: "10px",
+                },
+              }}
+            />
+            <span
+              className="fw-bold"
+              style={{
+                fontSize: "12px",
+                "@media (max-width: 768px)": {
+                  fontSize: "12px",
+                },
+              }}
+            >
+              Tickets
+            </span>
+          </div>
+          <div className="d-inline-flex align-items-center">
+            <ArrowDivider
+              style={{
+                "@media (max-width: 768px)": {
+                  fontSize: "20px",
+                  marginTop: "10px",
+                },
+              }}
+            />
+            <span
+              className="fw-bold"
+              style={{
+                fontSize: "12px",
+                "@media (max-width: 768px)": {
+                  fontSize: "12px",
+                },
+              }}
+            >
+              Details
+            </span>
+          </div>
+          <div className="d-inline-flex align-items-center">
+            <ArrowDivider
+              style={{
+                "@media (max-width: 768px)": {
+                  fontSize: "20px",
+                  marginTop: "10px",
+                },
+              }}
+            />
+            <span
+              className="fw-bold"
+              style={{
+                fontSize: "12px",
+                "@media (max-width: 768px)": {
+                  fontSize: "12px",
+                },
+              }}
+            >
+              Confirmation
+            </span>
+          </div>
         </div>
       </div>
       <div className="secure-lock-container-outer d-flex flex-grow-1 justify-content-end">

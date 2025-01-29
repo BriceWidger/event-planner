@@ -40,7 +40,6 @@ const SelectTickets = () => {
         style={{
           maxWidth: "800px",
           height: "auto",
-          padding: "0 15px",
           margin: "30px auto 0",
           display: "flex",
           flexDirection: "column",
@@ -48,12 +47,19 @@ const SelectTickets = () => {
           "@media (max-width: 575px)": {
             width: "100%",
             margin: "30px auto 0",
-            padding: "0 15px",
           },
         }}
       >
-        <div className="card-button-container">
-          <div className="card" style={{ backgroundColor: "white", flex: 1 }}>
+        <div className="card-button-container" style={{ width: "100%" }}>
+          <div style={{ marginBottom: "20px" }}>
+            <h3 style={{ fontSize: "20px", fontWeight: 600 }}>
+              Select Ticket(s)
+            </h3>
+          </div>
+          <div
+            className="card"
+            style={{ backgroundColor: "white", flex: 1, width: "100%" }}
+          >
             <div
               className="card-body"
               style={{
