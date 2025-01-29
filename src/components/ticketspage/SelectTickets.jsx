@@ -27,21 +27,26 @@ const SelectTickets = () => {
     <div
       className="container select-tickets-container"
       style={{
-        width: "770px",
+        maxWidth: "800px",
         height: "274.667px",
         padding: "0 15px",
         margin: "30px auto 0",
         position: "relative",
+        "@media (max-width: 575px)": {
+          width: "100%",
+          margin: "30px auto 0",
+          padding: "0 15px",
+        },
       }}
     >
       <div style={{ marginBottom: "20px" }}>
-        <h3>Select Ticket(s)</h3>
+        <h3 style={{ fontSize: "20px", fontWeight: 600 }}>Select Ticket(s)</h3>
       </div>
       <div className="card" style={{ backgroundColor: "white", flex: 1 }}>
         <div
           className="card-body"
           style={{
-            padding: "40px 50px",
+            padding: "30px",
             border: "0.566667px solid #ddd",
             borderTopWidth: "2.83333px",
             borderTopColor: "black",
@@ -49,8 +54,21 @@ const SelectTickets = () => {
         >
           <div className="row">
             <div className="col-md-8">
-              <h3>General Admission</h3>
-              <h5 className="text-muted">$0.00</h5>
+              <h3
+                style={{
+                  fontSize: "20px",
+                  fontWeight: 600,
+                  wordBreak: "break-word",
+                }}
+              >
+                General Admission
+              </h3>
+              <h5
+                className="text-muted"
+                style={{ fontSize: "17px", fontWeight: 700 }}
+              >
+                $0.00
+              </h5>
               <div className="ticket-description"></div>
             </div>
             <div className="col-md-4">
