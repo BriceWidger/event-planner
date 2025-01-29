@@ -11,15 +11,15 @@ const SelectTickets = () => {
     const selectedValue = selectRef.current.value;
 
     if (selectedValue !== "0") {
-      navigate("/details"); // navigate to /details
+      navigate("/details");
     } else {
       setShowAlert(true);
       setTimeout(() => {
         setAlertVisible(true);
-      }, 100); // add a small delay here
+      }, 100);
       setTimeout(() => {
         setAlertVisible(false);
-      }, 4100); // adjust the timeout to account for the delay
+      }, 4100);
     }
   }, [navigate]);
 

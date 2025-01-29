@@ -1,5 +1,5 @@
 import React from "react";
-import CheckoutHeader from "../CheckoutHeader";
+import CheckoutHeader from "../checkOutHeader/CheckoutHeader";
 import SelectTickets from "./SelectTickets";
 
 const TicketsPage = () => {

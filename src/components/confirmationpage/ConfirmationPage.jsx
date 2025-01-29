@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import CheckoutHeader from "../CheckoutHeader";
+import CheckoutHeader from "../checkOutHeader/CheckoutHeader";
 import OrderNumber from "./OrderNumber";
 import Receipt from "./Receipt";
 

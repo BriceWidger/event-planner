@@ -1,0 +1,12 @@
+/* CheckoutHeader.css */
+
+
+@media (max-width: 992px) {
+  .annual-conference-container {
+    display: none !important;
+  }
+  .secure-lock-container-outer {
+    display: none !important;
+  }
+}
+

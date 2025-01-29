@@ -2,7 +2,8 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import ArrowDivider from "./ArrowDivider";
 import { Link } from "react-router-dom";
-import DetailsTimer from "./detailspage/DetailsTimer";
+import DetailsTimer from "../detailspage/DetailsTimer";
+import "./CheckoutHeader.css";
 
 const CheckoutHeader = () => {
   const location = useLocation();
@@ -17,7 +18,7 @@ const CheckoutHeader = () => {
         backgroundColor: "white",
       }}
     >
-      <div className="d-flex flex-grow-1">
+      <div className="annual-conference-container d-flex flex-grow-1">
         <span className="fw-bold" style={{ fontSize: "12px" }}>
           Annual Conference
         </span>
@@ -47,9 +48,9 @@ const CheckoutHeader = () => {
           </span>
         </div>
       </div>
-      <div className="d-flex flex-grow-1 justify-content-end">
+      <div className="secure-lock-container-outer d-flex flex-grow-1 justify-content-end">
         <div>{location.pathname === "/details" && <DetailsTimer />}</div>
-        <div className="secure-lock-container d-inline-flex align-items-center">
+        <div className="secure-lock-container-inner d-inline-flex align-items-center">
           <img
             src="/images/locked-icon.png"
             style={{
