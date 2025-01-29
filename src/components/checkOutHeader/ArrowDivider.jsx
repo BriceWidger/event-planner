@@ -5,13 +5,12 @@ const ArrowDivider = () => {
     <span
       className="arrow-divider"
       style={{
-        fontSize: "100px",
+        fontSize: "80px",
         color: "#ccc",
         fontWeight: "100",
-        marginTop: "-30px",
         lineHeight: "59.1333px",
         transform: "scaleX(0.5)",
-        marginRight: "0px",
+        marginTop: "-20px", // Adjust this value to move the arrow up or down
       }}
     >
       ›

@@ -58,7 +58,13 @@ const SelectTickets = () => {
           </div>
           <div
             className="card"
-            style={{ backgroundColor: "white", flex: 1, width: "100%" }}
+            style={{
+              backgroundColor: "white",
+              flex: 1,
+              width: "100%",
+              border: "none",
+              borderTopWidth: "0",
+            }}
           >
             <div
               className="card-body"

@@ -12,7 +12,6 @@ const CheckoutHeader = () => {
     <div
       className="checkout-header vw-100 d-flex justify-content-between align-items-center"
       style={{
-        height: "59.1333px",
         border: "1px solid #ccc",
         padding: "14px",
         backgroundColor: "white",
@@ -42,7 +41,7 @@ const CheckoutHeader = () => {
               }}
             />
           </Link>
-          <div className="d-inline-flex align-items-center">
+          <div className="arrow-tickets-container d-flex align-items-center justify-content-center">
             <ArrowDivider
               style={{
                 "@media (max-width: 768px)": {
@@ -63,7 +62,7 @@ const CheckoutHeader = () => {
               Tickets
             </span>
           </div>
-          <div className="d-inline-flex align-items-center">
+          <div className="arrow-details-container d-flex align-items-center justify-content-center">
             <ArrowDivider
               style={{
                 "@media (max-width: 768px)": {
@@ -84,7 +83,7 @@ const CheckoutHeader = () => {
               Details
             </span>
           </div>
-          <div className="d-inline-flex align-items-center">
+          <div className="arrow-confirmation-container d-flex align-items-center justify-content-center">
             <ArrowDivider
               style={{
                 "@media (max-width: 768px)": {
