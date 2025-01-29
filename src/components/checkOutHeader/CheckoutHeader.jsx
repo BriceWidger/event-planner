@@ -26,6 +26,7 @@ const CheckoutHeader = () => {
         <div
           className="btn-breadcrumb d-inline-flex align-items-center flex-wrap"
           style={{
+            cursor: "pointer",
             "@media (max-width: 768px)": {
               flexDirection: "column",
               alignItems: "center",
@@ -54,6 +55,7 @@ const CheckoutHeader = () => {
               className="fw-bold"
               style={{
                 fontSize: "12px",
+                color: "#334999",
                 "@media (max-width: 768px)": {
                   fontSize: "12px",
                 },
