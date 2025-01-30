@@ -67,7 +67,12 @@ const DetailsForm = () => {
             style={{ display: "flex", flexDirection: "column", height: "100%" }}
           >
             <div className="form-container-upper" style={{ flex: 1 }}>
-              <h2 className="mb-4">General Admission - Ticket 1</h2>
+              <h2
+                className="mb-4"
+                style={{ fontSize: "20px", fontWeight: 600 }}
+              >
+                General Admission - Ticket 1
+              </h2>
               <div
                 className="name-input-fields-wrap row mb-3"
                 style={{ width: "577.933px", marginLeft: "0px" }}
@@ -86,6 +91,7 @@ const DetailsForm = () => {
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     error={formErrors.firstName}
+                    placeholder="First Name"
                   />
                 </div>
                 <div
@@ -98,6 +104,7 @@ const DetailsForm = () => {
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     error={formErrors.lastName}
+                    placeholder="Last Name"
                   />
                 </div>
               </div>
@@ -108,6 +115,7 @@ const DetailsForm = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   error={formErrors.email}
+                  placeholder="email@email.com"
                 />
               </div>
             </div>
