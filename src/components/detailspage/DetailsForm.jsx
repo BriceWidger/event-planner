@@ -1,15 +1,19 @@
+// DetailsForm.jsx
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import TextInput from "./TextInput";
+import CompleteRegistrationButton from "./CompleteRegistrationButton";
 
 const DetailsForm = () => {
+  const { register, handleSubmit, errors } = useForm();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [errors, setErrors] = useState({});
+  const [formErrors, setFormErrors] = useState({});
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const onSubmit = async (data) => {
     const newErrors = {};
 
     if (!firstName) newErrors.firstName = "Please enter a valid first name";
@@ -18,7 +22,7 @@ const DetailsForm = () => {
     else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email))
       newErrors.email = "Please enter a valid email";
 
-    setErrors(newErrors);
+    setFormErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
       navigate("/confirmation", {
@@ -55,7 +59,10 @@ const DetailsForm = () => {
           height: "100%",
         }}
       >
-        <form onSubmit={handleSubmit} style={{ flex: 1, height: "100%" }}>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          style={{ flex: 1, height: "100%" }}
+        >
           <div
             style={{ display: "flex", flexDirection: "column", height: "100%" }}
           >
@@ -73,91 +80,40 @@ const DetailsForm = () => {
                     marginRight: "10px",
                   }}
                 >
-                  <label htmlFor="firstName" className="form-label">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    className={`form-control ${
-                      errors.firstName ? "is-invalid" : ""
-                    }`}
-                    id="firstName"
+                  <TextInput
+                    label="First Name"
+                    name="firstName"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
-                    style={{
-                      border: "0.566667px solid #ccc",
-                      padding: "6px 12px",
-                      width: "283.967px",
-                      height: "50px",
-                      borderRadius: "0px",
-                    }}
+                    error={formErrors.firstName}
                   />
-                  {errors.firstName && (
-                    <div className="invalid-feedback">{errors.firstName}</div>
-                  )}
                 </div>
                 <div
                   className="col-md-6"
                   style={{ padding: "0", width: "fit-content" }}
                 >
-                  <label htmlFor="lastName" className="form-label">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    className={`form-control ${
-                      errors.lastName ? "is-invalid" : ""
-                    }`}
-                    id="lastName"
+                  <TextInput
+                    label="Last Name"
+                    name="lastName"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
-                    style={{
-                      border: "0.566667px solid #ccc",
-                      padding: "6px 12px",
-                      width: "283.967px",
-                      height: "50px",
-                      borderRadius: "0px",
-                    }}
+                    error={formErrors.lastName}
                   />
-                  {errors.lastName && (
-                    <div className="invalid-feedback">{errors.lastName}</div>
-                  )}
                 </div>
               </div>
               <div className="mb-3">
-                <label htmlFor="email" className="form-label">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  className={`form-control ${errors.email ? "is-invalid" : ""}`}
-                  id="email"
+                <TextInput
+                  label="Email Address"
+                  name="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  style={{
-                    border: "0.566667px solid #ccc",
-                    padding: "6px 12px",
-                    width: "577.933px",
-                    height: "50px",
-                    borderRadius: "0px",
-                  }}
+                  error={formErrors.email}
                 />
-                {errors.email && (
-                  <div className="invalid-feedback">{errors.email}</div>
-                )}
               </div>
             </div>
-            <button
-              type="submit"
-              className="btn btn-primary"
-              style={{
-                width: "241.667px",
-                height: "60px",
-                alignSelf: "flex-start",
-              }}
-            >
+            <CompleteRegistrationButton type="submit">
               Complete Registration
-            </button>
+            </CompleteRegistrationButton>
           </div>
         </form>
       </div>

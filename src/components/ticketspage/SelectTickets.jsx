@@ -118,6 +118,8 @@ const SelectTickets = () => {
             style={{
               marginTop: "20px",
               float: "right",
+              backgroundColor: "#334999",
+              borderColor: "#334999",
             }}
             onClick={handleContinueClick}
           />
