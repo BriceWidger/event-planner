@@ -2,7 +2,7 @@ import React from "react";
 import CheckoutHeader from "../checkOutHeader/CheckoutHeader";
 import DetailsForm from "./DetailsForm";
 import DetailsOrderSummary from "./DetailsOrderSummary";
-import DetailsTimer from "./DetailsTimer";
+import DetailsTimer from "../checkOutHeader/DetailsTimer";
 
 const DetailsPage = () => {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import ArrowDivider from "./ArrowDivider";
 import { Link } from "react-router-dom";
-import DetailsTimer from "../detailspage/DetailsTimer";
+import DetailsTimer from "./DetailsTimer";
 import "./CheckoutHeader.css";
 
 const CheckoutHeader = () => {

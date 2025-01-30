@@ -28,10 +28,11 @@ const DetailsTimer = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        color: "#334999",
       }}
     >
       <img
-        src="/images/clock-icon.png"
+        src="/images/clock-icon-blue.png"
         style={{ width: 12.5, height: 12.5, marginRight: 4 }}
       />
       {minutes}:{seconds.toString().padStart(2, "0")}
