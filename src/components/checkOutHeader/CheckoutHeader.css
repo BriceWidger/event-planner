@@ -1,6 +1,9 @@
 /* CheckoutHeader.css */
 
+/* Responsive Design */
+
 @media (max-width: 992px) {
+  /* Hide elements on medium screens */
   .annual-conference-container {
     display: none !important;
   }
@@ -10,9 +13,16 @@
 }
 
 @media (max-width: 575px) {
+  /* Adjust styles on small screens */
   .select-tickets-container {
     width: 100%;
     margin: 30px auto 0;
     padding: 0 15px;
   }
+}
+
+/* Custom Styles */
+
+.text-primary {
+  color: #334999 !important;
 }

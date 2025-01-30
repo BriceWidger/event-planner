@@ -7,6 +7,9 @@ import "./CheckoutHeader.css";
 
 const CheckoutHeader = () => {
   const location = useLocation();
+  const { pathname } = location;
+
+  const getPageStatus = (path) => pathname === path;
 
   return (
     <div
@@ -42,74 +45,42 @@ const CheckoutHeader = () => {
               }}
             />
           </Link>
-          <div className="arrow-tickets-container d-flex align-items-center justify-content-center">
-            <ArrowDivider
-              style={{
-                "@media (max-width: 768px)": {
-                  fontSize: "20px",
-                  marginTop: "10px",
-                },
-              }}
-            />
-            <span
-              className="fw-bold"
-              style={{
-                fontSize: "12px",
-                color: "#334999",
-                "@media (max-width: 768px)": {
-                  fontSize: "12px",
-                },
-              }}
+          {[
+            { path: "/tickets", label: "Tickets" },
+            { path: "/details", label: "Details" },
+            { path: "/confirmation", label: "Confirmation" },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className={`arrow-${item.label.toLowerCase()}-container d-flex align-items-center justify-content-center`}
             >
-              Tickets
-            </span>
-          </div>
-          <div className="arrow-details-container d-flex align-items-center justify-content-center">
-            <ArrowDivider
-              style={{
-                "@media (max-width: 768px)": {
-                  fontSize: "20px",
-                  marginTop: "10px",
-                },
-              }}
-            />
-            <span
-              className="fw-bold"
-              style={{
-                fontSize: "12px",
-                "@media (max-width: 768px)": {
+              <ArrowDivider
+                style={{
+                  "@media (max-width: 768px)": {
+                    fontSize: "20px",
+                    marginTop: "10px",
+                  },
+                }}
+              />
+              <span
+                className={`fw-bold ${
+                  getPageStatus(item.path) ? "text-primary" : ""
+                }`}
+                style={{
                   fontSize: "12px",
-                },
-              }}
-            >
-              Details
-            </span>
-          </div>
-          <div className="arrow-confirmation-container d-flex align-items-center justify-content-center">
-            <ArrowDivider
-              style={{
-                "@media (max-width: 768px)": {
-                  fontSize: "20px",
-                  marginTop: "10px",
-                },
-              }}
-            />
-            <span
-              className="fw-bold"
-              style={{
-                fontSize: "12px",
-                "@media (max-width: 768px)": {
-                  fontSize: "12px",
-                },
-              }}
-            >
-              Confirmation
-            </span>
-          </div>
+                  "@media (max-width: 768px)": {
+                    fontSize: "12px",
+                  },
+                }}
+              >
+                {item.label}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
       <div className="secure-lock-container-outer d-flex flex-grow-1 justify-content-end">
-        <div>{location.pathname === "/details" && <DetailsTimer />}</div>
+        {getPageStatus("/details") && <DetailsTimer />}
         <div className="secure-lock-container-inner d-inline-flex align-items-center">
           <img
             src="/images/locked-icon.png"
