@@ -1,0 +1,7 @@
+/* DetailsPage.css */
+
+@media (max-width: 768px) {
+  .checkout-right-content {
+    display: none !important;
+  }
+}
