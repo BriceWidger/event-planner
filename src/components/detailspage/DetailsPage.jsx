@@ -3,6 +3,7 @@ import CheckoutHeader from "../checkOutHeader/CheckoutHeader";
 import DetailsForm from "./DetailsForm";
 import DetailsOrderSummary from "./DetailsOrderSummary";
 import DetailsTimer from "../checkOutHeader/DetailsTimer";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const DetailsPage = () => {
   return (
@@ -16,15 +17,77 @@ const DetailsPage = () => {
     >
       <CheckoutHeader />
       <div
-        className="checkout-container clearfix"
+        className="show-order-summary-container d-block d-md-none"
+        style={{
+          width: "100%",
+          padding: "8px 20px",
+          borderTop: "1px solid #ccc",
+          borderBottom: "1px solid #ccc",
+          marginTop: "20px",
+          backgroundColor: "#fdfdfd",
+        }}
+      >
+        <div className="d-flex align-items-center">
+          <i
+            class="bi bi-cart"
+            style={{
+              color: "#334999",
+              marginRight: "5px",
+              marginTop: "-3.0px",
+            }}
+          ></i>
+          <span
+            className="text-primary"
+            style={{
+              color: "#334999",
+              cursor: "pointer",
+              wordBreak: "break-word",
+              fontWeight: 500,
+              fontSize: "14px",
+              fontFamily: "proxima-nova, sans-serif",
+            }}
+          >
+            Show Order Summary
+          </span>
+          <i
+            class="bi bi-chevron-down"
+            style={{
+              marginLeft: "5px",
+              fontSize: "11px",
+              color: "#334999",
+              cursor: "pointer",
+              wordBreak: "break-word",
+              fontWeight: 500,
+            }}
+          ></i>
+        </div>
+      </div>
+      <div
+        className="d-block d-md-none"
+        style={{
+          paddingTop: "20px",
+          paddingBottom: "50px",
+        }}
+      >
+        <div className="checkout-container clearfix">
+          <div className="d-flex">
+            <DetailsForm />
+            <DetailsOrderSummary />
+          </div>
+        </div>
+      </div>
+      <div
+        className="d-none d-md-block"
         style={{
           paddingTop: "36px",
           paddingBottom: "50px",
         }}
       >
-        <div className="d-flex">
-          <DetailsForm />
-          <DetailsOrderSummary />
+        <div className="checkout-container clearfix">
+          <div className="d-flex">
+            <DetailsForm />
+            <DetailsOrderSummary />
+          </div>
         </div>
       </div>
     </div>
