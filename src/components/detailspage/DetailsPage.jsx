@@ -73,7 +73,7 @@ const DetailsPage = () => {
         </div>
       </div>
       <div
-        className="d-block d-md-none"
+        className="form-outer-container d-block d-md-none"
         style={{
           paddingTop: "20px",
           paddingBottom: "50px",
@@ -86,6 +86,9 @@ const DetailsPage = () => {
           </div>
         </div>
       </div>
+
+      <p>yooooooooooooooooo</p>
+      
       <div
         className="d-none d-md-block"
         style={{
