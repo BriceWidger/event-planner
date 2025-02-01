@@ -2,7 +2,6 @@ import React from "react";
 import CheckoutHeader from "../checkOutHeader/CheckoutHeader";
 import DetailsForm from "./DetailsForm";
 import DetailsOrderSummary from "./DetailsOrderSummary";
-import DetailsTimer from "../checkOutHeader/DetailsTimer";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const DetailsPage = () => {
@@ -28,38 +27,49 @@ const DetailsPage = () => {
         }}
       >
         <div className="d-flex align-items-center">
-          <i
-            class="bi bi-cart"
+          <div
+            className="icons-text-wrap col-xs-8"
             style={{
-              color: "#334999",
-              marginRight: "5px",
-              marginTop: "-3.0px",
-            }}
-          ></i>
-          <span
-            className="text-primary"
-            style={{
+              width: "66.6666666667%",
+              float: "left",
+              position: "relative",
+              minHeight: "1px",
+              paddingRight: "15px",
+              paddingLeft: "15px",
               color: "#334999",
               cursor: "pointer",
-              wordBreak: "break-word",
               fontWeight: 500,
-              fontSize: "14px",
-              fontFamily: "proxima-nova, sans-serif",
             }}
           >
-            Show Order Summary
-          </span>
-          <i
-            class="bi bi-chevron-down"
-            style={{
-              marginLeft: "5px",
-              fontSize: "11px",
-              color: "#334999",
-              cursor: "pointer",
-              wordBreak: "break-word",
-              fontWeight: 500,
-            }}
-          ></i>
+            <i
+              class="bi bi-cart"
+              style={{
+                color: "#334999",
+                marginRight: "5px",
+                marginTop: "-3.0px",
+              }}
+            ></i>
+            <span
+              style={{
+                color: "#334999",
+                cursor: "pointer",
+                fontWeight: 500,
+                fontSize: "14px",
+                fontFamily: "proxima-nova, sans-serif",
+              }}
+            >
+              Show Order Summary
+            </span>
+            <i
+              class="bi bi-chevron-down"
+              style={{
+                marginLeft: "5px",
+                fontSize: "11px",
+                color: "#334999",
+                cursor: "pointer",
+              }}
+            ></i>
+          </div>
         </div>
       </div>
       <div
