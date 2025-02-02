@@ -1,10 +1,10 @@
 import React from "react";
 import "./DetailsPage.css";
 
-const DetailsOrderSummary = () => {
+const DetailsOrderSummaryDropdown = () => {
   return (
     <div
-      className="checkout-right-content d-flex flex-column justify-content-center align-items-center"
+      className="order-summary-container custom-flex-column justify-items-center align-items-center"
       style={{
         width: "275.783px",
         height: "165.633px",
@@ -12,37 +12,37 @@ const DetailsOrderSummary = () => {
         paddingLeft: "30px",
       }}
     >
-      <div className="checkout-table">
-        <div className="form-header">
+      <div className="summary-table">
+        <div className="header-section">
           <h5>Order Summary</h5>
         </div>
-        <table className="table">
+        <table className="custom-table">
           <tbody>
             <tr>
               <td
-                className="ticket-quantity text-center"
+                className="quantity-cell text-center"
                 style={{ backgroundColor: "#f8f9fc" }}
               >
                 <h5>
-                  <span className="ticket-quantity">1</span>
+                  <span className="quantity-value">1</span>
                 </h5>
               </td>
               <td
-                className="text-center"
+                className="center-cell"
                 style={{ backgroundColor: "#f8f9fc" }}
               >
                 <h5>General Admission</h5>
               </td>
-              <td className="text-end" style={{ backgroundColor: "#f8f9fc" }}>
-                <span className="ticket-amount">$0.00</span>
+              <td className="end-cell" style={{ backgroundColor: "#f8f9fc" }}>
+                <span className="amount-value">$0.00</span>
               </td>
             </tr>
           </tbody>
         </table>
-        <table className="table"></table>
+        <table className="custom-table"></table>
       </div>
     </div>
   );
 };
 
-export default DetailsOrderSummary;
+export default DetailsOrderSummaryDropdown;

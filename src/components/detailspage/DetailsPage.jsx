@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CheckoutHeader from "../checkOutHeader/CheckoutHeader";
 import DetailsForm from "./DetailsForm";
 import DetailsOrderSummary from "./DetailsOrderSummary";
+import DetailsOrderSummaryDropdown from "./DetailsOrderSummaryDropdown";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const DetailsPage = () => {
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleIconClick = () => {
+    setShowDropdown(!showDropdown);
+  };
+
   return (
     <div
       style={{
@@ -40,6 +57,7 @@ const DetailsPage = () => {
               cursor: "pointer",
               fontWeight: 500,
             }}
+            onClick={handleIconClick}
           >
             <i
               class="bi bi-cart"
@@ -72,6 +90,7 @@ const DetailsPage = () => {
           </div>
         </div>
       </div>
+      {isMobile && showDropdown && <DetailsOrderSummaryDropdown />}
       <div
         className="form-outer-container d-block d-md-none"
         style={{
@@ -86,9 +105,6 @@ const DetailsPage = () => {
           </div>
         </div>
       </div>
-
-      <p>yooooooooooooooooo</p>
-      
       <div
         className="d-none d-md-block"
         style={{
