@@ -1,7 +1,18 @@
-/* DetailsPage.css */
-
 @media (max-width: 768px) {
   .checkout-right-content {
     display: none !important;
+  }
+  .checkout-left-content {
+    padding: 0 !important;
+  }
+  .name-input-fields-wrap {
+    flex-direction: column;
+  }
+  .name-input-fields-wrap .col-md-6 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .First-last-email-main-containers {
+    width: 100%;
   }
 }

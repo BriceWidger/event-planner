@@ -73,50 +73,49 @@ const DetailsForm = () => {
               >
                 General Admission - Ticket 1
               </h2>
-              <div
-                className="name-input-fields-wrap row mb-3"
-                style={{ width: "577.933px", marginLeft: "0px" }}
-              >
+              <div className="name-input-fields-wrap row mb-3">
                 <div
                   className="col-md-6"
-                  style={{
-                    padding: "0",
-                    width: "fit-content",
-                    marginRight: "10px",
-                  }}
+                  style={{ padding: "0", marginRight: "10px" }}
                 >
-                  <TextInput
-                    label="First Name"
-                    name="firstName"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    error={formErrors.firstName}
-                    placeholder="First Name"
-                  />
+                  <div className="first-name-main-container">
+                    <TextInput
+                      label="First Name"
+                      name="firstName"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      error={formErrors.firstName}
+                      placeholder="First Name"
+                    />
+                  </div>
                 </div>
                 <div
                   className="col-md-6"
                   style={{ padding: "0", width: "fit-content" }}
                 >
-                  <TextInput
-                    label="Last Name"
-                    name="lastName"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    error={formErrors.lastName}
-                    placeholder="Last Name"
-                  />
+                  <div className="last-name-main-container">
+                    <TextInput
+                      label="Last Name"
+                      name="lastName"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      error={formErrors.lastName}
+                      placeholder="Last Name"
+                    />
+                  </div>
                 </div>
               </div>
               <div className="mb-3">
-                <TextInput
-                  label="Email Address"
-                  name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  error={formErrors.email}
-                  placeholder="email@email.com"
-                />
+                <div className="email-main-container">
+                  <TextInput
+                    label="Email Address"
+                    name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    error={formErrors.email}
+                    placeholder="email@email.com"
+                  />
+                </div>
               </div>
             </div>
             <CompleteRegistrationButton type="submit">

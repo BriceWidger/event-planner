@@ -3,7 +3,7 @@ import React from "react";
 
 const TextInput = ({ label, name, value, onChange, error, placeholder }) => {
   return (
-    <div>
+    <div className="first-last-email-main-containers">
       <label
         htmlFor={name}
         style={{
@@ -24,7 +24,6 @@ const TextInput = ({ label, name, value, onChange, error, placeholder }) => {
         style={{
           border: "0.566667px solid #ccc",
           padding: "6px 12px",
-          width: "283.967px",
           height: "50px",
           borderRadius: "0px",
         }}
