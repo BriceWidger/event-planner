@@ -6,40 +6,50 @@ const DetailsOrderSummaryDropdown = () => {
     <div
       className="order-summary-container custom-flex-column justify-items-center align-items-center"
       style={{
-        width: "275.783px",
         height: "165.633px",
-        marginRight: "72px",
-        paddingLeft: "30px",
+        padding: "30px",
       }}
     >
       <div className="summary-table">
         <div className="header-section">
-          <h5>Order Summary</h5>
+          <h5 style={{ fontSize: "15px", fontWeight: 500, margin: "10px 0" }}>
+            Order Summary
+          </h5>
         </div>
-        <table className="custom-table">
+        <table className="table">
           <tbody>
             <tr>
               <td
-                className="quantity-cell text-center"
-                style={{ backgroundColor: "#f8f9fc" }}
+                className="ticket-quantity"
+                style={{ padding: "8px", verticalAlign: "middle" }}
               >
-                <h5>
-                  <span className="quantity-value">1</span>
+                <h5 style={{ marginBottom: 0 }}>
+                  <span className="ticket-quantity">1</span>
                 </h5>
               </td>
-              <td
-                className="center-cell"
-                style={{ backgroundColor: "#f8f9fc" }}
-              >
-                <h5>General Admission</h5>
+              <td style={{ verticalAlign: "middle" }}>
+                <h5
+                  style={{ fontSize: "17px", fontWeight: 500, marginBottom: 0 }}
+                >
+                  General Admission
+                </h5>
               </td>
-              <td className="end-cell" style={{ backgroundColor: "#f8f9fc" }}>
-                <span className="amount-value">$0.00</span>
+              <td className="text-right" style={{ verticalAlign: "middle" }}>
+                <span
+                  className="ticket-amount"
+                  style={{
+                    fontSize: "15px",
+                    fontWeight: 600,
+                    textAlign: "right",
+                  }}
+                >
+                  $0.00
+                </span>
               </td>
             </tr>
           </tbody>
         </table>
-        <table className="custom-table"></table>
+        <table className="table"></table>
       </div>
     </div>
   );
