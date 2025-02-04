@@ -12,6 +12,8 @@ const CompleteRegistrationButton = ({ type, children }) => {
         alignSelf: "flex-start",
         backgroundColor: "#334999",
         borderColor: "#334999",
+        padding: "20px 50px",
+        marginTop: "10px",
       }}
     >
       {children}
