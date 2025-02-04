@@ -12,6 +12,8 @@ const CompleteRegistrationButton = ({ type, children }) => {
         borderColor: "#334999",
         padding: "20px 50px",
         marginTop: "10px",
+        fontSize: "14px",
+        fontWeight: 700,
       }}
     >
       {children}

@@ -1,19 +1,22 @@
 @media (max-width: 768px) {
-  .checkout-right-content {
-    display: none !important;
+  .show-order-summary-container {
+    display: block !important;
+  }
+  .checkout-desktop-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .form-container {
+    padding: 20px 30px 30px 30px !important;
   }
   .checkout-left-content {
     padding: 0 !important;
+    min-width: 100% !important;
   }
-  .name-input-fields-wrap {
-    flex-direction: column;
-  }
-  .name-input-fields-wrap .col-md-6 {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  .First-last-email-main-containers {
-    width: 100%;
+  .checkout-right-content {
+    display: none !important;
   }
   .complete-registration-button {
     width: 100% !important;

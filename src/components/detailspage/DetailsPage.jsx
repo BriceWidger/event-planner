@@ -11,7 +11,7 @@ const DetailsPage = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 767);
+      setIsMobile(window.innerWidth <= 768);
     };
     window.addEventListener("resize", handleResize);
     handleResize();
@@ -43,7 +43,7 @@ const DetailsPage = () => {
           backgroundColor: "#fdfdfd",
         }}
       >
-        <div className="d-flex align-items-center">
+        <div className="show-order-summary-header d-flex align-items-center">
           <div
             className="icons-text-wrap col-xs-8"
             style={{
@@ -99,21 +99,26 @@ const DetailsPage = () => {
         }}
       >
         <div className="checkout-container clearfix">
-          <div className="d-flex">
+          <div className="mobile-checkout-content d-flex">
             <DetailsForm />
             <DetailsOrderSummary />
           </div>
         </div>
       </div>
       <div
-        className="d-none d-md-block"
+        className="checkout-desktop-container d-none d-md-block"
         style={{
           paddingTop: "36px",
           paddingBottom: "50px",
+          maxWidth: "100%",
+          margin: "0 auto",
+          padding: "36px 20px",
+          display: "flex",
+          flexDirection: "column",
         }}
       >
         <div className="checkout-container clearfix">
-          <div className="d-flex">
+          <div className="desktop-checkout-content d-flex">
             <DetailsForm />
             <DetailsOrderSummary />
           </div>

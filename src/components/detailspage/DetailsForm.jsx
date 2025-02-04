@@ -64,7 +64,7 @@ const DetailsForm = () => {
             General Admission - Ticket 1
           </h2>
           <div
-            className="col-md-6"
+            className="col-md-12"
             style={{ padding: "0", marginBottom: "24px" }}
           >
             <TextInput
@@ -75,7 +75,7 @@ const DetailsForm = () => {
             />
           </div>
           <div
-            className="col-md-6"
+            className="col-md-12"
             style={{ padding: "0", marginBottom: "24px" }}
           >
             <TextInput
