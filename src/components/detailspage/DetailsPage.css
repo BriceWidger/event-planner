@@ -15,5 +15,7 @@
   .First-last-email-main-containers {
     width: 100%;
   }
+  .complete-registration-button {
+    width: 100% !important;
+  }
 }
-

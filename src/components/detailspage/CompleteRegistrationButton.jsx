@@ -5,10 +5,8 @@ const CompleteRegistrationButton = ({ type, children }) => {
   return (
     <button
       type={type}
-      className="btn btn-primary"
+      className="complete-registration-button btn btn-primary"
       style={{
-        width: "241.667px",
-        height: "60px",
         alignSelf: "flex-start",
         backgroundColor: "#334999",
         borderColor: "#334999",

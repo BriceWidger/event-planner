@@ -56,7 +56,8 @@ const DetailsForm = () => {
           onSubmit={handleSubmit(onSubmit)}
           style={{
             flex: 1,
-            flexGrow: 1, // add this line
+            flexGrow: 1,
+            overflowY: "auto",
           }}
         >
           <h2 className="mb-4" style={{ fontSize: "20px", fontWeight: 600 }}>
