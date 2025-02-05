@@ -9,32 +9,61 @@ const DetailsOrderSummary = () => {
         width: "275.783px",
         height: "165.633px",
         marginRight: "72px",
-        paddingLeft: "30px",
       }}
     >
       <div className="checkout-table">
         <div className="form-header">
-          <h5>Order Summary</h5>
+          <h5
+            style={{
+              fontSize: "15px",
+              fontWeight: 700,
+              margin: "40px 0 26px 0",
+            }}
+          >
+            Order Summary
+          </h5>
         </div>
         <table className="table">
           <tbody>
-            <tr>
+            <tr style={{ borderTop: "1px solid #ccc" }}>
               <td
-                className="ticket-quantity text-center"
+                className="ticket-quantity text-center pt-3 pb-4"
                 style={{ backgroundColor: "#f8f9fc" }}
               >
                 <h5>
-                  <span className="ticket-quantity">1</span>
+                  <span
+                    className="ticket-quantity"
+                    style={{ fontSize: "20px", fontWeight: "700" }}
+                  >
+                    1
+                  </span>
                 </h5>
               </td>
               <td
-                className="text-center"
+                className="text-center pt-3 pb-4"
                 style={{ backgroundColor: "#f8f9fc" }}
               >
-                <h5>General Admission</h5>
+                <h5
+                  style={{
+                    fontSize: "17px",
+                    fontWeight: "700",
+                    marginBottom: 0,
+                    textAlign: "left",
+                  }}
+                >
+                  General Admission
+                </h5>
               </td>
-              <td className="text-end" style={{ backgroundColor: "#f8f9fc" }}>
-                <span className="ticket-amount">$0.00</span>
+              <td
+                className="text-end pt-3 pb-4"
+                style={{ backgroundColor: "#f8f9fc" }}
+              >
+                <span
+                  className="ticket-amount"
+                  style={{ fontSize: "15px", fontWeight: "600" }}
+                >
+                  $0.00
+                </span>
               </td>
             </tr>
           </tbody>
