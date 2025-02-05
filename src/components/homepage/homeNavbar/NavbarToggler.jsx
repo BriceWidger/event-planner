@@ -1,25 +1,44 @@
-// NavbarToggler.js
-import React from 'react';
-import { Button } from 'react-bootstrap';
+// NavbarToggler.jsx
+import React, { useState, useEffect } from "react";
+import { Button } from "react-bootstrap";
+import OverlayMenu from "./OverlayMenu";
 
 const NavbarToggler = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleToggle = () => {
+    setShowMenu(!showMenu);
+  };
+
+  useEffect(() => {
+    if (showMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [showMenu]);
+
   return (
-    <Button
-      className="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-      style={{
-        width: '44px',
-        height: '34px',
-        padding: '0'
-      }}
-    >
-      <span className="navbar-toggler-icon"></span>
-    </Button>
+    <div>
+      <Button
+        className="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        style={{
+          width: "44px",
+          height: "34px",
+          padding: "0",
+        }}
+        onClick={handleToggle}
+      >
+        <span className="navbar-toggler-icon"></span>
+      </Button>
+      {showMenu && <OverlayMenu />}
+    </div>
   );
 };
 
