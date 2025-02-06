@@ -1,105 +1,78 @@
-// OverlayMenu.jsx
 import React from "react";
 
-const menuItemStyle = {
-  color: "#fff",
-  textDecoration: "none",
-  fontSize: "20px",
-  fontWeight: "500",
-  cursor: "pointer",
+const styles = {
+  overlay: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "rgba(0, 0, 0, 0.9)",
+    color: "#fff",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    overflow: "hidden",
+    zIndex: 1000,
+  },
+  ul: {
+    listStyle: "none",
+    padding: "100px",
+    margin: 0,
+    width: "100%",
+    textAlign: "center",
+    position: "absolute",
+    top: 0,
+  },
+  li: {
+    padding: "0",
+    margin: 0,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "10px 0",
+    height: "100%",
+  },
+  menuItem: {
+    color: "#fff",
+    fontSize: "20px",
+    fontWeight: "600",
+    cursor: "pointer",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100%",
+    textDecoration: "none",
+  },
 };
 
 const OverlayMenu = () => {
+  const menuItems = [
+    "About",
+    "Schedule",
+    "Speakers",
+    "Schedule",
+    "Location",
+    "Sponsors",
+    "News",
+  ];
+
   return (
-    <div
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        backgroundColor: "rgba(0, 0, 0, 0.9)",
-        color: "#fff",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        overflow: "hidden",
-        zIndex: 1000,
-      }}
-    >
-      <ul
-        style={{
-          listStyle: "none",
-          padding: 0,
-          margin: 0,
-          width: "100%",
-          textAlign: "center",
-        }}
-      >
-        <li
-          style={{
-            marginBottom: "20px",
-          }}
-        >
-          <a href="#" style={menuItemStyle}>
-            About
-          </a>
-        </li>
-        <li
-          style={{
-            marginBottom: "20px",
-          }}
-        >
-          <a href="#" style={menuItemStyle}>
-            Schedule
-          </a>
-        </li>
-        <li
-          style={{
-            marginBottom: "20px",
-          }}
-        >
-          <a href="#" style={menuItemStyle}>
-            Speakers
-          </a>
-        </li>
-        <li
-          style={{
-            marginBottom: "20px",
-          }}
-        >
-          <a href="#" style={menuItemStyle}>
-            Schedule
-          </a>
-        </li>
-        <li
-          style={{
-            marginBottom: "20px",
-          }}
-        >
-          <a href="#" style={menuItemStyle}>
-            Location
-          </a>
-        </li>
-        <li
-          style={{
-            marginBottom: "20px",
-          }}
-        >
-          <a href="#" style={menuItemStyle}>
-            Sponsors
-          </a>
-        </li>
-        <li
-          style={{
-            marginBottom: "20px",
-          }}
-        >
-          <a href="#" style={menuItemStyle}>
-            News
-          </a>
-        </li>
+    <div style={styles.overlay}>
+      <ul style={styles.ul}>
+        {menuItems.map((text, index) => (
+          <li key={index} style={styles.li}>
+            <a
+              href="#"
+              style={styles.menuItem}
+              onMouseOver={(e) => (e.target.style.textDecoration = "underline")}
+              onMouseOut={(e) => (e.target.style.textDecoration = "none")}
+            >
+              {text}
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );
