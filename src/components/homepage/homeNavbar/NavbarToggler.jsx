@@ -1,7 +1,7 @@
 // NavbarToggler.jsx
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
-import OverlayMenu from "./OverlayMenu";
+import FadeInMenu from "./FadeInMenu";
 
 const NavbarToggler = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -37,7 +37,7 @@ const NavbarToggler = () => {
       >
         <span className="navbar-toggler-icon"></span>
       </Button>
-      {showMenu && <OverlayMenu />}
+      <FadeInMenu showMenu={showMenu} />
     </div>
   );
 };
