@@ -1,4 +1,5 @@
 import React from "react";
+import NavLink from "./NavLink";
 
 const styles = {
   overlay: {
@@ -52,7 +53,6 @@ const OverlayMenu = () => {
     "About",
     "Schedule",
     "Speakers",
-    "Schedule",
     "Location",
     "Sponsors",
     "News",
