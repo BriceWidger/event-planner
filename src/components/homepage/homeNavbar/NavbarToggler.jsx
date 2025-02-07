@@ -10,6 +10,10 @@ const NavbarToggler = () => {
     setShowMenu(!showMenu);
   };
 
+  const onHideMenu = () => {
+    setShowMenu(false);
+  };
+
   useEffect(() => {
     if (showMenu) {
       document.body.style.overflow = "hidden";
@@ -37,7 +41,7 @@ const NavbarToggler = () => {
       >
         <span className="navbar-toggler-icon"></span>
       </Button>
-      <FadeInMenu showMenu={showMenu} />
+      <FadeInMenu showMenu={showMenu} onHideMenu={onHideMenu} />
     </div>
   );
 };

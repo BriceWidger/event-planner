@@ -1,8 +1,8 @@
-// OverlayMenu.js
+// OverlayMenu.jsx
 import React from "react";
 import NavLink from "./NavLink";
 
-const OverlayMenu = () => {
+const OverlayMenu = ({ onHideMenu }) => {
   const menuItems = [
     "About",
     "Speakers",
@@ -81,26 +81,21 @@ const OverlayMenu = () => {
       <ul style={ulStyles}>
         {menuItems.map((text, index) => (
           <li key={index} style={liStyles}>
-            {Object.keys(scrollIds).includes(text) ? (
-              <NavLink href="#" scrollId={scrollIds[text]} noMargin>
-                <a
-                  style={linkStyles}
-                  onMouseOver={handleMouseOver}
-                  onMouseOut={handleMouseOut}
-                >
-                  {text}
-                </a>
-              </NavLink>
-            ) : (
+            <NavLink
+              href="#"
+              scrollId={scrollIds[text]}
+              noMargin
+              onClick={onHideMenu}
+            >
               <a
-                href="#"
                 style={linkStyles}
                 onMouseOver={handleMouseOver}
                 onMouseOut={handleMouseOut}
+                onClick={onHideMenu}
               >
                 {text}
               </a>
-            )}
+            </NavLink>
           </li>
         ))}
       </ul>

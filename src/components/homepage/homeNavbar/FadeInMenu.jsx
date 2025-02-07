@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import OverlayMenu from "./OverlayMenu";
 
-const FadeInMenu = ({ showMenu }) => {
+const FadeInMenu = ({ showMenu, onHideMenu }) => {
   const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const FadeInMenu = ({ showMenu }) => {
         pointerEvents: fadeIn ? "auto" : "none",
       }}
     >
-      {fadeIn && <OverlayMenu />}
+      {fadeIn && <OverlayMenu onHideMenu={onHideMenu} />}
     </div>
   );
 };
