@@ -6,7 +6,7 @@ import "./Schedule.css";
 const Schedule = () => {
   return (
     <Container
-      className="px-0"
+      className="schedule-container-outer px-0"
       style={{
         paddingTop: "70px",
         paddingBottom: "84px",

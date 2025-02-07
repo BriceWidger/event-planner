@@ -1,8 +1,18 @@
+// OverlayMenu.js
 import React from "react";
 import NavLink from "./NavLink";
 
-const styles = {
-  overlay: {
+const OverlayMenu = () => {
+  const menuItems = [
+    "About",
+    "Speakers",
+    "Schedule",
+    "Location",
+    "Sponsors",
+    "News",
+  ];
+
+  const overlayMenuStyles = {
     position: "fixed",
     top: 0,
     left: 0,
@@ -16,8 +26,9 @@ const styles = {
     flexDirection: "column",
     overflow: "hidden",
     zIndex: 1000,
-  },
-  ul: {
+  };
+
+  const ulStyles = {
     listStyle: "none",
     padding: "100px",
     margin: 0,
@@ -25,8 +36,9 @@ const styles = {
     textAlign: "center",
     position: "absolute",
     top: 0,
-  },
-  li: {
+  };
+
+  const liStyles = {
     padding: "0",
     margin: 0,
     display: "flex",
@@ -34,8 +46,9 @@ const styles = {
     alignItems: "center",
     padding: "10px 0",
     height: "100%",
-  },
-  menuItem: {
+  };
+
+  const linkStyles = {
     color: "#fff",
     fontSize: "20px",
     fontWeight: "600",
@@ -45,32 +58,49 @@ const styles = {
     alignItems: "center",
     height: "100%",
     textDecoration: "none",
-  },
-};
+  };
 
-const OverlayMenu = () => {
-  const menuItems = [
-    "About",
-    "Schedule",
-    "Speakers",
-    "Location",
-    "Sponsors",
-    "News",
-  ];
+  const handleMouseOver = (e) => {
+    e.target.style.textDecoration = "underline";
+  };
+
+  const handleMouseOut = (e) => {
+    e.target.style.textDecoration = "none";
+  };
+
+  const scrollIds = {
+    Schedule: "schedule-container-middle",
+    Speakers: "keynote-container-main",
+    Location: "conference-location-container-main",
+    Sponsors: "sponsors-container-main",
+    News: "news-updates-container",
+  };
 
   return (
-    <div style={styles.overlay}>
-      <ul style={styles.ul}>
+    <div className="overlay-menu" style={overlayMenuStyles}>
+      <ul style={ulStyles}>
         {menuItems.map((text, index) => (
-          <li key={index} style={styles.li}>
-            <a
-              href="#"
-              style={styles.menuItem}
-              onMouseOver={(e) => (e.target.style.textDecoration = "underline")}
-              onMouseOut={(e) => (e.target.style.textDecoration = "none")}
-            >
-              {text}
-            </a>
+          <li key={index} style={liStyles}>
+            {Object.keys(scrollIds).includes(text) ? (
+              <NavLink href="#" scrollId={scrollIds[text]} noMargin>
+                <a
+                  style={linkStyles}
+                  onMouseOver={handleMouseOver}
+                  onMouseOut={handleMouseOut}
+                >
+                  {text}
+                </a>
+              </NavLink>
+            ) : (
+              <a
+                href="#"
+                style={linkStyles}
+                onMouseOver={handleMouseOver}
+                onMouseOut={handleMouseOut}
+              >
+                {text}
+              </a>
+            )}
           </li>
         ))}
       </ul>
