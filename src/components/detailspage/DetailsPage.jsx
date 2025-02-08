@@ -26,7 +26,6 @@ const DetailsPage = () => {
     <div
       style={{
         backgroundColor: "#f8f9fc",
-        height: "100vh",
         display: "flex",
         flexDirection: "column",
       }}
