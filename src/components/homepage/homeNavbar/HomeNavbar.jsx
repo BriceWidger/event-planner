@@ -5,10 +5,12 @@ import NavbarToggler from "./NavbarToggler";
 import NavbarLinks from "./NavbarLinks";
 import RegisterNowButton from "./RegisterNowButtonNav";
 
-
 const HomeNavbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg py-2" style={{ paddingLeft: '10px', paddingRight: '10px' }}>
+    <nav
+      className="navbar navbar-expand-lg py-2"
+      style={{ paddingLeft: "10px", paddingRight: "10px" }}
+    >
       <Logo className="mb-0" />
       <NavbarToggler />
       <div className="collapse navbar-collapse" id="navbarSupportedContent">

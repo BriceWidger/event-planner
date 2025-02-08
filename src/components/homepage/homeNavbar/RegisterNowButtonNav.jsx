@@ -19,7 +19,7 @@ const RegisterNowButtonNav = () => {
         width: "146.95px",
         height: "39px",
         whiteSpace: "nowrap",
-        textAlign: "center"
+        textAlign: "center",
       }}
     >
       REGISTER NOW
