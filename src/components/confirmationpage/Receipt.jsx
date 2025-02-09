@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Tooltip } from "bootstrap";
 
-// Note: Tooltips may not work on mobile devices due to reliance on mouse hover events.
+// Tooltip triggers: Mobile - tap on icon, Desktop - cursor hover.
 
 const Receipt = () => {
   useEffect(() => {
