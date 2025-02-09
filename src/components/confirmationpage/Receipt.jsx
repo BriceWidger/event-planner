@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Tooltip } from "bootstrap";
 
+// Note: Tooltips may not work on mobile devices due to reliance on mouse hover events.
+
 const Receipt = () => {
   useEffect(() => {
     const tooltipTriggerList = document.querySelectorAll("[title]");
@@ -118,8 +120,8 @@ const Receipt = () => {
               <strong>
                 Service Fee
                 <i
-                  className="bi bi-question-circle fee-tip"
-                  title="Credit card processing fee ($0.00) +  EventCreate Platform Fee ($0.00) "
+                  className="bi bi-question-circle"
+                  title="Credit card processing fee ($0.00) +  EventCreate Platform Fee ($0.00)"
                   style={{ marginLeft: 4 }}
                 ></i>
               </strong>
