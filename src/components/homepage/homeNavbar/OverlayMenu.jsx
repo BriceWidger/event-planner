@@ -57,15 +57,6 @@ const OverlayMenu = ({ onHideMenu }) => {
     justifyContent: "center",
     alignItems: "center",
     height: "100%",
-    textDecoration: "none",
-  };
-
-  const handleMouseOver = (e) => {
-    e.target.style.textDecoration = "underline";
-  };
-
-  const handleMouseOut = (e) => {
-    e.target.style.textDecoration = "none";
   };
 
   const scrollIds = {
@@ -87,12 +78,7 @@ const OverlayMenu = ({ onHideMenu }) => {
               noMargin
               onClick={onHideMenu}
             >
-              <a
-                style={linkStyles}
-                onMouseOver={handleMouseOver}
-                onMouseOut={handleMouseOut}
-                onClick={onHideMenu}
-              >
+              <a style={linkStyles} onClick={onHideMenu}>
                 {text}
               </a>
             </NavLink>
