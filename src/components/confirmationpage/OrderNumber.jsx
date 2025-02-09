@@ -7,7 +7,7 @@ const OrderNumber = ({ orderNumber, firstName, lastName, email }) => {
       <h1
         style={{
           fontWeight: 700,
-          fontSize: 38,
+          fontSize: 36,
           marginTop: 20,
           marginBottom: 10,
         }}

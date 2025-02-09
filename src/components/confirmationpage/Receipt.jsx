@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import { Tooltip } from "bootstrap";
 
 const Receipt = () => {
+  useEffect(() => {
+    const tooltipTriggerList = document.querySelectorAll("[title]");
+    const tooltipList = [...tooltipTriggerList].map(
+      (tooltipTriggerEl) => new Tooltip(tooltipTriggerEl)
+    );
+  }, []);
+
   return (
     <div className="checkout-table" style={{ marginTop: 60 }}>
       <div className="form-header">
         <h3
           style={{
             marginBottom: 26,
-            fontSize: 20,
+            fontSize: 18,
             fontWeight: 600,
             marginTop: 20,
             lineHeight: 1.1,
@@ -43,9 +52,10 @@ const Receipt = () => {
                 <span
                   className="ticket-quantity"
                   style={{
-                    fontSize: "20px",
+                    fontSize: "17px",
                     fontWeight: "700",
                     lineHeight: 1.1,
+                    verticalAlign: "middle",
                   }}
                 >
                   1
@@ -95,11 +105,9 @@ const Receipt = () => {
               <strong>
                 Service Fee
                 <i
-                  className="fa fa-question-circle fee-tip"
-                  data-toggle="tooltip"
-                  data-placement="bottom"
-                  title=""
-                  data-original-title="Credit card processing fee ($0.00) +  EventCreate Platform Fee ($0.00) "
+                  className="bi bi-question-circle fee-tip"
+                  title="Credit card processing fee ($0.00) +  EventCreate Platform Fee ($0.00) "
+                  style={{ marginLeft: 4 }}
                 ></i>
               </strong>
             </td>
