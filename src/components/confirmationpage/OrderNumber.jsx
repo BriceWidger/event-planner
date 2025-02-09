@@ -32,6 +32,9 @@ const OrderNumber = ({ orderNumber, firstName, lastName, email }) => {
           borderTop: "3px solid #1f2834",
           padding: "40px 40px",
           marginBottom: "20px",
+          "@media (max-width: 768px)": {
+            padding: "20px",
+          },
         }}
       >
         <div className="row">
@@ -74,6 +77,9 @@ const OrderNumber = ({ orderNumber, firstName, lastName, email }) => {
                   verticalAlign: "middle",
                   touchAction: "manipulation",
                   lineHeight: 1.428571429,
+                  "@media (max-width: 768px)": {
+                    padding: "10px 20px",
+                  },
                 }}
                 href="https://checkout.eventcreate.com/annual-conference-666681/build-ticket?oid=aa022cfe-dc85-4cb0-8643-c0aacb104ed8&amp;rt=914dd8f4ea15cf4194d95e708554e7ac089111dc"
               >

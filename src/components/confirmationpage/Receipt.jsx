@@ -11,7 +11,7 @@ const Receipt = () => {
   }, []);
 
   return (
-    <div className="checkout-table" style={{ marginTop: 60 }}>
+    <div className="checkout-table" style={{ marginTop: 60, maxWidth: "100%" }}>
       <div className="form-header">
         <h3
           style={{
@@ -36,6 +36,9 @@ const Receipt = () => {
           marginBottom: 20,
           fontSize: 14,
           lineHeight: 1.428571429,
+          "@media (max-width: 768px)": {
+            fontSize: 12,
+          },
         }}
       >
         <tbody>
@@ -43,9 +46,13 @@ const Receipt = () => {
             <td
               className="ticket-quantity"
               style={{
-                width: "454.317px",
+                width: "100%",
                 verticalAlign: "middle",
                 textAlign: "center",
+                "@media (max-width: 768px)": {
+                  width: "100%",
+                  padding: "10px",
+                },
               }}
             >
               <h5 style={{ display: "flex", alignItems: "center" }}>
@@ -81,6 +88,9 @@ const Receipt = () => {
                 lineHeight: 1.428571429,
                 verticalAlign: "top",
                 textAlign: "right",
+                "@media (max-width: 768px)": {
+                  padding: "10px",
+                },
               }}
             >
               <span className="ticket-amount">$0.00</span>
@@ -97,6 +107,9 @@ const Receipt = () => {
           marginBottom: 20,
           fontSize: 14,
           lineHeight: 1.428571429,
+          "@media (max-width: 768px)": {
+            fontSize: 12,
+          },
         }}
       >
         <tbody>
@@ -121,6 +134,9 @@ const Receipt = () => {
                 verticalAlign: "top",
                 textAlign: "right",
                 borderBottom: "none",
+                "@media (max-width: 768px)": {
+                  padding: "10px",
+                },
               }}
             >
               <span className="fee-amount">$0.00</span>
@@ -140,6 +156,9 @@ const Receipt = () => {
                 verticalAlign: "top",
                 textAlign: "right",
                 borderBottom: "none",
+                "@media (max-width: 768px)": {
+                  padding: "10px",
+                },
               }}
             >
               <span className="total-amount">$0.00</span>
