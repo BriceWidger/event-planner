@@ -8,7 +8,7 @@ import RegisterNowButton from "./RegisterNowButtonNav";
 const HomeNavbar = () => {
   return (
     <nav
-      className="navbar navbar-expand-lg py-2"
+      className="navbar navbar-expand-lg"
       style={{ width: "100%", paddingLeft: "10px", paddingRight: "10px" }}
     >
       <Logo className="mb-0" />

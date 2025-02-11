@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import RegisterNowButton from "../RegisterNowButton";
+import "./HomeMainPictureComponent.css";
 
 const BreakAllContainer = styled.div`
   word-break: break-all;
@@ -68,10 +69,7 @@ const HomeMainPictureComponent = () => {
                   fontWeight: 400,
                   fontSize: "80px",
                   lineHeight: "110%",
-                  fontFamily: " 'Unna', serif;",
-                  "@media (max-width: 677px)": {
-                    color: "red",
-                  },
+                  fontFamily: "'Unna', serif !important",
                 }}
               >
                 Annual Conference

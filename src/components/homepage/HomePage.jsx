@@ -14,8 +14,8 @@ import HomeFooter from "./footer/Footer";
 function HomePage() {
   return (
     <div className="app-container">
-      <header style={{ height: '68px', display: 'flex', alignItems: 'center' }}>
-      <HomeNavbar />
+      <header style={{ display: "flex", alignItems: "center" }}>
+        <HomeNavbar />
       </header>
       <main>
         <HomeMainPicture />
