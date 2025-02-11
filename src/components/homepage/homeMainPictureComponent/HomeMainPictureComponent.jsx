@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import RegisterNowButton from "../RegisterNowButton";
-import "./HomeMainPictureComponent.css";
+import './HomeMainPictureComponent.css';
 
 const BreakAllContainer = styled.div`
   word-break: break-all;
