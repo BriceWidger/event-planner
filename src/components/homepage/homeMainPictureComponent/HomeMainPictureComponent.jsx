@@ -11,14 +11,13 @@ const HomeMainPictureComponent = () => {
   return (
     <div
       className="container-fluid p-0 position-relative"
-      style={{ height: "100%" }}
+      style={{ minHeight: "712px" }}
     >
       <div
         className="background-container"
         style={{
-          padding: "180.38px 20px 280px 20px",
+          padding: "240px 20px 280px 20px",
           width: "100%",
-          minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

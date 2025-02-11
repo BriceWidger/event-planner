@@ -14,7 +14,15 @@ import HomeFooter from "./footer/Footer";
 function HomePage() {
   return (
     <div className="app-container">
-      <header style={{ display: "flex", alignItems: "center" }}>
+      <header
+        style={{
+          display: "flex",
+          alignItems: "center",
+          position: "absolute",
+          top: 0,
+          left: 0,
+        }}
+      >
         <HomeNavbar />
       </header>
       <main>
