@@ -9,7 +9,7 @@ const HomeNavbar = () => {
   return (
     <nav
       className="navbar navbar-expand-lg py-2"
-      style={{ paddingLeft: "10px", paddingRight: "10px" }}
+      style={{ width: "100%", paddingLeft: "10px", paddingRight: "10px" }}
     >
       <Logo className="mb-0" />
       <NavbarToggler />

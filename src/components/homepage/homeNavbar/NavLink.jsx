@@ -15,12 +15,13 @@ const NavLink = ({ children, href, scrollId, noMargin }) => {
   const className = noMargin
     ? "link-dark text-decoration-none fw-semibold"
     : "link-dark text-decoration-none ms-3 fw-semibold";
-
   return (
     <a
       href={href}
-      style={{ fontSize: "12px" }}
-      className={className}
+      style={{ fontSize: "11px", letterSpacing: "2px" }}
+      className={`link-dark text-decoration-none ${
+        noMargin ? "" : "ms-3"
+      } fw-bold`}
       onClick={handleScroll}
     >
       {children}
