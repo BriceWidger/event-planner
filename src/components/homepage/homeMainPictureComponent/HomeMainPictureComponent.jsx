@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import RegisterNowButton from "../RegisterNowButton";
-import './HomeMainPictureComponent.css';
+import "./HomeMainPictureComponent.css";
 
 const BreakAllContainer = styled.div`
   word-break: break-all;
@@ -14,6 +14,7 @@ const HomeMainPictureComponent = () => {
       style={{ height: "100%" }}
     >
       <div
+        className="background-container"
         style={{
           padding: "180.38px 20px 280px 20px",
           width: "100%",
@@ -23,7 +24,6 @@ const HomeMainPictureComponent = () => {
           justifyContent: "center",
           alignItems: "center",
         }}
-        className="background-container"
       >
         <div
           className="background-image"
@@ -69,7 +69,6 @@ const HomeMainPictureComponent = () => {
                   fontWeight: 400,
                   fontSize: "80px",
                   lineHeight: "110%",
-                  fontFamily: "'Unna', serif !important",
                 }}
               >
                 Annual Conference
@@ -77,11 +76,11 @@ const HomeMainPictureComponent = () => {
               <p
                 className="text-center"
                 style={{
-                  color: "#888",
-                  fontWeight: 400,
-                  fontSize: "16px",
+                  color: "#fff",
+                  fontWeight: "400",
+                  fontSize: "19px",
                   lineHeight: "150%",
-                  fontFamily: "'Nunito Sans', sans-serif",
+                  textAlign: "center",
                 }}
               >
                 Join us on December 26
