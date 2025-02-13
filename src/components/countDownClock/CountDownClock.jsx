@@ -27,7 +27,11 @@ const CountDownClock = () => {
     <div>
       <div
         className="container-fluid"
-        style={{ backgroundColor: "#e9e9e9", padding: "34px 0" }}
+        style={{
+          backgroundColor: "#e9e9e9",
+          padding: "34px 0",
+          fontFamily: "Poppins, sans-serif",
+        }}
       >
         <div className="row stop-expanding justify-content-center text-center">
           <div className="clock-digit-container">
