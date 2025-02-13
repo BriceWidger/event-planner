@@ -5,40 +5,44 @@ const KeynoteSpeakers = () => (
   <section
     id="keynote-container-main"
     className="container-fluid d-flex align-items-center"
-    style={{ paddingTop: "70px", paddingBottom: "84px" }}
+    style={{ paddingTop: "70px", paddingBottom: "84px", maxWidth: "1140px" }}
   >
     <div className="container-fluid p-0 m-0">
       <div className="w-100 d-flex justify-content-center">
-        <div className="col-md-8 col-lg-6">
+        <div
+          className="col-md-8 col-lg-6"
+          style={{ width: "100%", textAlign: "center" }}
+        >
           <div
             className="keynote-title-container"
             style={{
-              maxWidth: "100%",
+              maxWidth: "760px",
+              margin: "0 auto",
               padding: "0 15px",
+              wordBreak: "break-word",
             }}
           >
             <h1
-              className="keynote-title text-center display-4"
+              className="keynote-title display-4"
               style={{
                 fontSize: "52px",
                 fontFamily: "'Unna', serif",
                 fontWeight: 400,
-                margin: 0,
+                marginBottom: "16px",
                 lineHeight: "110%",
-                wordBreak: "break-all",
               }}
             >
               Keynote Speakers
             </h1>
             <p
-              className="keynote-subtitle text-center"
+              className="keynote-subtitle"
               style={{
                 fontWeight: 400,
                 fontSize: "16px",
                 lineHeight: "150%",
                 fontFamily: "'Nunito Sans', sans-serif",
                 color: "#888",
-                wordBreak: "break-word",
+                marginBottom: "70px",
               }}
             >
               We are extremely excited to showcase the lineup of impressive
@@ -87,7 +91,12 @@ const KeynoteSpeakers = () => (
         <div className="row justify-content-center">
           <div
             className="col-md-8 col-lg-6 mx-auto text-center"
-            style={{ wordBreak: "break-all",     padding: "0 20px", }}
+            style={{
+              wordBreak: "break-all",
+              padding: "0 20px",
+              marginTop: "64px",
+              width: "100%",
+            }}
           >
             <strong>Interested in speaking at the event?</strong>
             <p className="text-break">

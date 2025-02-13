@@ -1,3 +1,5 @@
+// SpeakerInfo.jsx
+
 import React from "react";
 
 const Speaker = ({ imageSrc, name, role, info }) => (
@@ -29,7 +31,9 @@ const Speaker = ({ imageSrc, name, role, info }) => (
       style={{
         marginTop: "16px",
         marginBottom: "8px",
-        wordBreak: "break-all",
+        fontWeight: "bold",
+        fontSize: 20,
+        lineHeight: "110%",
       }}
     >
       {name}
@@ -38,7 +42,11 @@ const Speaker = ({ imageSrc, name, role, info }) => (
       className="speaker-role text-center text-sm fw-bold"
       style={{
         marginBottom: "12px",
-        wordBreak: "break-all",
+        fontWeight: "bold",
+        textTransform: "uppercase",
+        letterSpacing: "2px",
+        fontSize: 14,
+        lineHeight: "140%",
       }}
     >
       {role}
@@ -46,7 +54,11 @@ const Speaker = ({ imageSrc, name, role, info }) => (
     <p
       className="speaker-info text-center"
       style={{
-        wordBreak: "break-all",
+        fontWeight: 400,
+        fontSize: 16,
+        lineHeight: "150%",
+        fontFamily: "'Nunito Sans', sans-serif",
+        color: "#888",
       }}
     >
       {info}
