@@ -1,12 +1,13 @@
-/*
- * CountDownClock.css
+/* CountDownClock.css
  * Styles for the CountDownClock component
  */
 
 /* Clock digits */
 .clock-digit {
-  word-break: break-all;
   font-size: 60px;
+  line-height: 62px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.1em;
 }
 
 .clock-digit-container {
