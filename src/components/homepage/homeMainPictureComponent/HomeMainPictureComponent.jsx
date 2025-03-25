@@ -8,6 +8,13 @@ const BreakAllContainer = styled.div`
 `;
 
 const HomeMainPictureComponent = () => {
+  const getDynamicDate = () => {
+    const now = new Date();
+    now.setDate(now.getDate() + 20);
+    now.setHours(now.getHours() + 5);
+    return now.toLocaleDateString(undefined, { month: "long", day: "numeric" });
+  };
+
   return (
     <div
       className="container-fluid p-0 position-relative"
@@ -45,20 +52,26 @@ const HomeMainPictureComponent = () => {
           style={{
             width: "100%",
             height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
           }}
         >
           <div
             className="AnnualConferenceMainContainer-inner flex-column justify-content-center align-items-center text-center"
             style={{
-              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
             }}
           >
             <div
               className="d-flex flex-column justify-content-center align-items-center"
               style={{
-                "@media (min-width: 768px)": {
-                  width: "50%",
-                },
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
               }}
             >
               <h1
@@ -68,6 +81,7 @@ const HomeMainPictureComponent = () => {
                   fontWeight: 400,
                   fontSize: "80px",
                   lineHeight: "110%",
+                  textAlign: "center",
                 }}
               >
                 Annual Conference
@@ -82,15 +96,14 @@ const HomeMainPictureComponent = () => {
                   textAlign: "center",
                 }}
               >
-                Join us on December 26
+                Join us on {getDynamicDate()}
               </p>
             </div>
             <div
               className="register-now-btn-container text-center d-flex justify-content-center"
               style={{
-                "@media (min-width: 768px)": {
-                  width: "50%",
-                },
+                display: "flex",
+                justifyContent: "center",
               }}
             >
               <RegisterNowButton />

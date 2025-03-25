@@ -2,6 +2,13 @@ import React from "react";
 import RegisterNowButton from "./RegisterNowButton";
 
 const DontMissOut = () => {
+  const getDynamicDate = () => {
+    const now = new Date();
+    now.setDate(now.getDate() + 20); // Add 20 days
+    now.setHours(now.getHours() + 5); // Add 5 hours
+    return now.toLocaleDateString(undefined, { month: "long", day: "numeric" });
+  };
+
   return (
     <div
       className="dontmissout-container position-relative h-100"
@@ -58,7 +65,7 @@ const DontMissOut = () => {
               wordBreak: "break-all",
             }}
           >
-            Register by December 26 . We look forward to seeing you there.
+            Register by {getDynamicDate()}. We look forward to seeing you there.
           </p>
           <RegisterNowButton />
         </div>

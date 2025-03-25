@@ -1,4 +1,3 @@
-// HomePage.jsx
 import React from "react";
 import HomeNavbar from "./homeNavbar/HomeNavbar";
 import HomeMainPicture from "./homeMainPictureComponent/HomeMainPictureComponent";
