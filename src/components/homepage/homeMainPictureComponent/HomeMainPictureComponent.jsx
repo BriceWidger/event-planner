@@ -7,14 +7,14 @@ const BreakAllContainer = styled.div`
   word-break: break-all;
 `;
 
-const HomeMainPictureComponent = () => {
-  const getDynamicDate = () => {
-    const now = new Date();
-    now.setDate(now.getDate() + 20);
-    now.setHours(now.getHours() + 5);
-    return now.toLocaleDateString(undefined, { month: "long", day: "numeric" });
-  };
+export const getDynamicDate = () => {
+  const now = new Date();
+  now.setDate(now.getDate() + 20);
+  now.setHours(now.getHours() + 5);
+  return now; // Return the Date object instead of a formatted string
+};
 
+const HomeMainPictureComponent = () => {
   return (
     <div
       className="container-fluid p-0 position-relative"
@@ -96,7 +96,7 @@ const HomeMainPictureComponent = () => {
                   textAlign: "center",
                 }}
               >
-                Join us on {getDynamicDate()}
+                Join us on {getDynamicDate().toLocaleDateString(undefined, { month: "long", day: "numeric" })}
               </p>
             </div>
             <div
