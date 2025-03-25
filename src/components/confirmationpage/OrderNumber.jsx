@@ -1,7 +1,79 @@
 import React from "react";
+import { jsPDF } from "jspdf";
+import "jspdf-autotable";
+import QRCode from "qrcode";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const OrderNumber = ({ orderNumber, firstName, lastName, email }) => {
+  const handlePrintTicket = async () => {
+    const doc = new jsPDF("portrait", "px", "a4");
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const qrCodeData = await QRCode.toDataURL(orderNumber);
+
+    const containerWidth = 400;
+    const containerX = (pageWidth - containerWidth) / 2;
+
+    doc.setFont("Helvetica", "bold");
+    doc.setFontSize(22);
+    doc.setTextColor(0, 51, 102);
+    doc.text("Your Ticket for the Annual Conference", containerX, 50);
+
+    doc.setFont("Helvetica", "normal");
+    doc.setFontSize(12);
+    doc.setTextColor(60, 60, 60);
+    doc.text(`Order Number: ${orderNumber}`, containerX, 70);
+    doc.text(`Ordered by: ${firstName} ${lastName} (${email})`, containerX, 85);
+    doc.text(`Date: ${new Date().toLocaleString()}`, containerX, 100);
+
+    doc.setDrawColor(180, 180, 180);
+    doc.setLineWidth(1);
+    doc.setFillColor(240, 240, 240);
+    doc.rect(containerX, 120, containerWidth, 250, "FD");
+
+    const qrCodeSize = 100;
+    const qrCodeX = containerX + 20;
+    const qrCodeY = 140;
+    doc.addImage(qrCodeData, "PNG", qrCodeX, qrCodeY, qrCodeSize, qrCodeSize);
+
+    doc.setFontSize(18);
+    doc.setFont("Helvetica", "bold");
+    doc.setTextColor(0, 51, 102);
+    doc.text("Annual Conference", containerX + containerWidth / 2, qrCodeY + 20, { align: "center" });
+
+    doc.setFontSize(12);
+    doc.setFont("Helvetica", "normal");
+    doc.setTextColor(60, 60, 60);
+    doc.text(`Order ID: #${orderNumber}`, containerX + containerWidth / 2, qrCodeY + 40, { align: "center" });
+
+    doc.autoTable({
+      startY: qrCodeY + 120,
+      margin: { left: containerX + 20, right: containerX + 20 },
+      head: [["Attendee", "Price", "Type"]],
+      body: [[`${firstName} ${lastName}`, "$0.00", "General Admission"]],
+      theme: "grid",
+      styles: { halign: "center", fontSize: 10, cellPadding: 5 },
+      headStyles: { fillColor: [0, 51, 102], textColor: [255, 255, 255], fontStyle: "bold" },
+      bodyStyles: { textColor: [0, 0, 0] },
+    });
+
+    doc.setFontSize(10);
+    doc.setTextColor(80, 80, 80);
+    doc.text(
+      "Thank you for choosing Event Planner!",
+      pageWidth / 2,
+      doc.internal.pageSize.getHeight() - 40,
+      { align: "center" }
+    );
+    doc.text(
+      "For more information, visit our website or contact support.",
+      pageWidth / 2,
+      doc.internal.pageSize.getHeight() - 25,
+      { align: "center" }
+    );
+
+    doc.save("ticket-receipt.pdf");
+  };
+
   return (
     <div className="ticket-container-main">
       <h1
@@ -57,9 +129,8 @@ const OrderNumber = ({ orderNumber, firstName, lastName, email }) => {
           </div>
           <div className="col-md-6 col-lg-5">
             <div className="form-group">
-              <a
+              <button
                 className="btn btn-primary"
-                target="_blank"
                 style={{
                   backgroundColor: "#2d4086",
                   color: "#fff",
@@ -81,10 +152,10 @@ const OrderNumber = ({ orderNumber, firstName, lastName, email }) => {
                     padding: "10px 20px",
                   },
                 }}
-                href="https://checkout.eventcreate.com/annual-conference-666681/build-ticket?oid=aa022cfe-dc85-4cb0-8643-c0aacb104ed8&amp;rt=914dd8f4ea15cf4194d95e708554e7ac089111dc"
+                onClick={handlePrintTicket}
               >
                 <i className="bi bi-printer"></i> Print My Ticket(s) Now
-              </a>
+              </button>
               <p
                 className="help-block"
                 style={{
