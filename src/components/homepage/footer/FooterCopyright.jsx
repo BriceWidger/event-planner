@@ -1,6 +1,8 @@
 import React from "react";
 
 const FooterCopyright = () => {
+  const currentYear = new Date().getFullYear(); // Dynamically get the current year
+
   return (
     <p
       style={{
@@ -13,7 +15,7 @@ const FooterCopyright = () => {
         wordBreak: "break-all",
       }}
     >
-      &copy; 2024. All Rights Reserved. <br />
+      &copy; {currentYear}. All Rights Reserved. <br />
       <span style={{ wordBreak: "break-all" }}>
         Event website powered by Brice Widger
       </span>
