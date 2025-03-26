@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import FooterTwo from "../homepage/footer/FooterTwo"; // Import the new FooterTwo component
 
 const SelectTickets = () => {
   const navigate = useNavigate();
   const [selectedValue, setSelectedValue] = useState("0");
-  const [showAlert, setShowAlert] = useState(false);
   const [alertVisible, setAlertVisible] = useState(false);
 
   const handleContinueClick = () => {
     if (selectedValue !== "0") {
       navigate("/details");
     } else {
-      setShowAlert(true);
       setAlertVisible(true);
       setTimeout(() => {
         setAlertVisible(false);
@@ -24,30 +23,19 @@ const SelectTickets = () => {
       className="container select-tickets-container"
       style={{
         maxWidth: "800px",
-        height: "auto",
         padding: "0 15px",
         margin: "30px auto 0",
         position: "relative",
-        "@media (max-width: 575px)": {
-          width: "100%",
-          margin: "30px auto 0",
-          padding: "0 15px",
-        },
       }}
     >
       <div
         className="card-container"
         style={{
           maxWidth: "800px",
-          height: "auto",
           margin: "30px auto 0",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          "@media (max-width: 575px)": {
-            width: "100%",
-            margin: "30px auto 0",
-          },
         }}
       >
         <div className="card-button-container" style={{ width: "100%" }}>
@@ -63,7 +51,6 @@ const SelectTickets = () => {
               flex: 1,
               width: "100%",
               border: "none",
-              borderTopWidth: "0",
             }}
           >
             <div
@@ -99,6 +86,7 @@ const SelectTickets = () => {
                     className="form-select"
                     value={selectedValue}
                     onChange={(e) => setSelectedValue(e.target.value)}
+                    aria-label="Select number of tickets"
                   >
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -122,10 +110,11 @@ const SelectTickets = () => {
               borderColor: "#334999",
             }}
             onClick={handleContinueClick}
+            aria-label="Continue to details page"
           />
         </div>
       </div>
-      {showAlert && (
+      {alertVisible && (
         <div
           className="alert alert-danger ticket-alert"
           style={{
@@ -136,14 +125,13 @@ const SelectTickets = () => {
             right: "20px",
             backgroundColor: "#252f3e",
             color: "#fbfbfb",
-            transition: alertVisible
-              ? "top 0.3s ease-in-out"
-              : "top 0.22s ease-in-out",
+            transition: "top 0.3s ease-in-out",
           }}
         >
           Please select a ticket
         </div>
       )}
+      <FooterTwo />
     </div>
   );
 };
