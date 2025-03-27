@@ -4,7 +4,7 @@ import { Tooltip } from "bootstrap";
 
 // Tooltip triggers: Mobile - tap on icon, Desktop - cursor hover.
 
-const Receipt = () => {
+const Receipt = ({ ticketQuantity, ticketAmount }) => {
   useEffect(() => {
     const tooltipTriggerList = document.querySelectorAll("[title]");
     const tooltipList = [...tooltipTriggerList].map(
@@ -67,7 +67,7 @@ const Receipt = () => {
                     verticalAlign: "middle",
                   }}
                 >
-                  1
+                  {ticketQuantity}
                 </span>
                 <h5
                   style={{
@@ -95,7 +95,7 @@ const Receipt = () => {
                 },
               }}
             >
-              <span className="ticket-amount">$0.00</span>
+              <span className="ticket-amount">${ticketAmount.toFixed(2)}</span>
             </td>
           </tr>
         </tbody>

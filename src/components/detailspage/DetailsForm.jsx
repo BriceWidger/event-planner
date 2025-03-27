@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import TextInput from "./TextInput";
 import CompleteRegistrationButton from "./CompleteRegistrationButton";
 
-const DetailsForm = () => {
+const DetailsForm = ({ ticketQuantity, ticketAmount }) => {
   const { register, handleSubmit, errors } = useForm();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -30,6 +30,8 @@ const DetailsForm = () => {
           firstName,
           lastName,
           email,
+          ticketQuantity,
+          ticketAmount,
         },
       });
     }

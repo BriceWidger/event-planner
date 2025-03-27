@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import CheckoutHeader from "../checkOutHeader/CheckoutHeader";
 import DetailsForm from "./DetailsForm";
 import DetailsOrderSummary from "./DetailsOrderSummary";
@@ -7,6 +8,9 @@ import FooterTwo from "../homepage/footer/FooterTwo";
 import "./DetailsPage.css";
 
 const DetailsPage = () => {
+  const location = useLocation();
+  const { ticketQuantity = 0, ticketAmount = 0 } = location.state || {};
+
   const [showDropdown, setShowDropdown] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -101,8 +105,14 @@ const DetailsPage = () => {
       >
         <div className="checkout-container clearfix">
           <div className="mobile-checkout-content d-flex">
-            <DetailsForm />
-            <DetailsOrderSummary />
+            <DetailsForm
+              ticketQuantity={ticketQuantity}
+              ticketAmount={ticketAmount}
+            />
+            <DetailsOrderSummary
+              ticketQuantity={ticketQuantity}
+              ticketAmount={ticketAmount}
+            />
           </div>
         </div>
       </div>
@@ -121,8 +131,14 @@ const DetailsPage = () => {
       >
         <div className="checkout-container clearfix">
           <div className="desktop-checkout-content d-flex">
-            <DetailsForm />
-            <DetailsOrderSummary />
+            <DetailsForm
+              ticketQuantity={ticketQuantity}
+              ticketAmount={ticketAmount}
+            />
+            <DetailsOrderSummary
+              ticketQuantity={ticketQuantity}
+              ticketAmount={ticketAmount}
+            />
           </div>
         </div>
       </div>

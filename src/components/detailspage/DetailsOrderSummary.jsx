@@ -1,7 +1,7 @@
 import React from "react";
 import "./DetailsPage.css";
 
-const DetailsOrderSummary = () => {
+const DetailsOrderSummary = ({ ticketQuantity, ticketAmount }) => {
   return (
     <div
       className="checkout-right-content d-flex flex-column justify-content-center align-items-center"
@@ -35,7 +35,7 @@ const DetailsOrderSummary = () => {
                     className="ticket-quantity"
                     style={{ fontSize: "20px", fontWeight: "700" }}
                   >
-                    1
+                    {ticketQuantity}
                   </span>
                 </h5>
               </td>
@@ -62,7 +62,7 @@ const DetailsOrderSummary = () => {
                   className="ticket-amount"
                   style={{ fontSize: "15px", fontWeight: "600" }}
                 >
-                  $0.00
+                  ${ticketAmount.toFixed(2)}
                 </span>
               </td>
             </tr>

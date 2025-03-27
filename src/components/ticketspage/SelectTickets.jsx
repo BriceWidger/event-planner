@@ -7,8 +7,15 @@ const SelectTickets = () => {
   const [alertVisible, setAlertVisible] = useState(false);
 
   const handleContinueClick = () => {
+    const ticketPrice = 150; // General Admission price
     if (selectedValue !== "0") {
-      navigate("/details");
+      const totalPrice = ticketPrice * parseInt(selectedValue, 10);
+      navigate("/details", {
+        state: {
+          ticketQuantity: selectedValue,
+          ticketAmount: totalPrice,
+        },
+      });
     } else {
       setAlertVisible(true);
       setTimeout(() => {
@@ -77,7 +84,7 @@ const SelectTickets = () => {
                     className="text-muted"
                     style={{ fontSize: "17px", fontWeight: 700 }}
                   >
-                    $0.00
+                    $150.00
                   </h5>
                   <div className="ticket-description"></div>
                 </div>
@@ -126,6 +133,9 @@ const SelectTickets = () => {
             backgroundColor: "#252f3e",
             color: "#fbfbfb",
             transition: "top 0.3s ease-in-out",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           Please select a ticket

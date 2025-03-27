@@ -6,7 +6,9 @@ import Receipt from "./Receipt";
 import FooterTwo from "../homepage/footer/FooterTwo";
 
 const ConfirmationPage = () => {
-  const { state: { firstName, lastName, email } = {} } = useLocation();
+  const {
+    state: { firstName, lastName, email, ticketQuantity, ticketAmount } = {},
+  } = useLocation();
 
   return (
     <div
@@ -43,7 +45,10 @@ const ConfirmationPage = () => {
             lastName={lastName}
             email={email}
           />
-          <Receipt />
+          <Receipt
+            ticketQuantity={ticketQuantity}
+            ticketAmount={ticketAmount}
+          />
         </div>
       </div>
       <FooterTwo />
