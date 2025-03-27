@@ -3,7 +3,8 @@ import CheckoutHeader from "../checkOutHeader/CheckoutHeader";
 import DetailsForm from "./DetailsForm";
 import DetailsOrderSummary from "./DetailsOrderSummary";
 import DetailsOrderSummaryDropdown from "./DetailsOrderSummaryDropdown";
-import "bootstrap-icons/font/bootstrap-icons.css";
+import FooterTwo from "../homepage/footer/FooterTwo";
+import "./DetailsPage.css";
 
 const DetailsPage = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -26,6 +27,7 @@ const DetailsPage = () => {
     <div
       style={{
         backgroundColor: "#f8f9fc",
+        minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
       }}
@@ -59,7 +61,7 @@ const DetailsPage = () => {
             onClick={handleIconClick}
           >
             <i
-              class="bi bi-cart"
+              className="bi bi-cart"
               style={{
                 color: "#334999",
                 marginRight: "5px",
@@ -78,7 +80,7 @@ const DetailsPage = () => {
               Show Order Summary
             </span>
             <i
-              class="bi bi-chevron-down"
+              className="bi bi-chevron-down"
               style={{
                 marginLeft: "5px",
                 fontSize: "11px",
@@ -114,6 +116,7 @@ const DetailsPage = () => {
           padding: "36px 20px",
           display: "flex",
           flexDirection: "column",
+          flex: "1",
         }}
       >
         <div className="checkout-container clearfix">
@@ -123,6 +126,7 @@ const DetailsPage = () => {
           </div>
         </div>
       </div>
+      <FooterTwo />
     </div>
   );
 };

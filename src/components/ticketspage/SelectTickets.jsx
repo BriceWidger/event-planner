@@ -25,7 +25,7 @@ const SelectTickets = () => {
         padding: "0 15px",
         margin: "30px auto 0",
         position: "relative",
-        flex: "1", // Allow the container to grow and fill available space
+        flex: "1",
       }}
     >
       <div
