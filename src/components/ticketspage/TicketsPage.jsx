@@ -1,19 +1,23 @@
 import React from "react";
 import CheckoutHeader from "../checkOutHeader/CheckoutHeader";
 import SelectTickets from "./SelectTickets";
+import FooterTwo from "../homepage/footer/FooterTwo";
 
 const TicketsPage = () => {
   return (
     <div
       style={{
         backgroundColor: "#f8f9fc",
-        height: "100vh",
+        minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
       }}
     >
       <CheckoutHeader />
-      <SelectTickets />
+      <div style={{ flex: "1" }}>
+        <SelectTickets />
+      </div>
+      <FooterTwo />
     </div>
   );
 };

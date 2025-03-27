@@ -4,11 +4,9 @@ const FooterTwo = () => {
   return (
     <div className="footer-container">
       <div
-        className="checkout-tos sticky"
+        className="checkout-tos"
         style={{
-          position: "fixed",
-          bottom: "0",
-          left: "0",
+          position: "relative",
           width: "100%",
           borderTop: "1px solid #e6e6e6",
           paddingTop: "20px",
@@ -21,13 +19,7 @@ const FooterTwo = () => {
           flexWrap: "wrap",
         }}
       >
-        <div
-          style={{
-            flex: "1 1 auto",
-            textAlign: "left",
-          }}
-          className="footer-links"
-        >
+        <div className="footer-links">
           <span
             style={{
               color: "#334999",
@@ -48,13 +40,7 @@ const FooterTwo = () => {
             Terms of Service
           </span>
         </div>
-        <div
-          style={{
-            flex: "1 1 auto",
-            textAlign: "right",
-          }}
-          className="footer-powered"
-        >
+        <div className="footer-powered">
           <span
             style={{
               color: "black",
@@ -70,19 +56,20 @@ const FooterTwo = () => {
         {`
           .footer-container .checkout-tos {
             display: flex;
-            flex-direction: row; /* Default row layout */
+            flex-direction: row;
           }
 
           @media (max-width: 768px) {
             .footer-container .checkout-tos {
-              flex-direction: column; /* Stack elements in a column */
-              align-items: center; /* Center align items vertically */
-              justify-content: center; /* Center horizontally */
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
             }
-            .footer-container .footer-links, .footer-container .footer-powered {
-              flex: 1 1 100%; /* Full width for each row */
-              text-align: center; /* Center text horizontally */
-              margin: 10px 0; /* Add spacing between rows */
+            .footer-container .footer-links,
+            .footer-container .footer-powered {
+              flex: 1 1 100%;
+              text-align: center;
+              margin: 10px 0;
             }
           }
         `}
