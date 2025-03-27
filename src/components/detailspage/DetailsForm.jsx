@@ -25,6 +25,14 @@ const DetailsForm = ({ ticketQuantity, ticketAmount }) => {
     setFormErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
+      // Generate a clean and professional order number
+      const now = new Date();
+      const formattedDate = `${now.getFullYear()}${(now.getMonth() + 1)
+        .toString()
+        .padStart(2, "0")}${now.getDate().toString().padStart(2, "0")}`;
+      const randomPart = Math.floor(Math.random() * 1000).toString().padStart(3, "0");
+      const orderNumber = `${formattedDate}-${randomPart}`;
+
       navigate("/confirmation", {
         state: {
           firstName,
@@ -32,6 +40,7 @@ const DetailsForm = ({ ticketQuantity, ticketAmount }) => {
           email,
           ticketQuantity,
           ticketAmount,
+          orderNumber, // Pass the order number
         },
       });
     }

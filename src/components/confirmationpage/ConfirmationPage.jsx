@@ -7,7 +7,7 @@ import FooterTwo from "../homepage/footer/FooterTwo";
 
 const ConfirmationPage = () => {
   const {
-    state: { firstName, lastName, email, ticketQuantity, ticketAmount } = {},
+    state: { firstName, lastName, email, ticketQuantity, ticketAmount, orderNumber } = {},
   } = useLocation();
 
   return (
@@ -40,10 +40,11 @@ const ConfirmationPage = () => {
           }}
         >
           <OrderNumber
-            orderNumber="12333341"
+            orderNumber={orderNumber} // Pass the order number
             firstName={firstName}
             lastName={lastName}
             email={email}
+            totalAmount={(ticketAmount + (ticketAmount * 0.0224 + 100)).toFixed(2)} // Calculate total amount
           />
           <Receipt
             ticketQuantity={ticketQuantity}

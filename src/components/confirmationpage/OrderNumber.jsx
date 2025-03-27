@@ -4,7 +4,7 @@ import "jspdf-autotable";
 import QRCode from "qrcode";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-const OrderNumber = ({ orderNumber, firstName, lastName, email }) => {
+const OrderNumber = ({ orderNumber, firstName, lastName, email, totalAmount }) => {
   const handlePrintTicket = async () => {
     const doc = new jsPDF("portrait", "px", "a4");
     const pageWidth = doc.internal.pageSize.getWidth();
@@ -49,7 +49,7 @@ const OrderNumber = ({ orderNumber, firstName, lastName, email }) => {
       startY: qrCodeY + 120,
       margin: { left: containerX + 20, right: containerX + 20 },
       head: [["Attendee", "Price", "Type"]],
-      body: [[`${firstName} ${lastName}`, "$0.00", "General Admission"]],
+      body: [[`${firstName} ${lastName}`, `$${totalAmount}`, "General Admission"]],
       theme: "grid",
       styles: { halign: "center", fontSize: 10, cellPadding: 5 },
       headStyles: { fillColor: [0, 51, 102], textColor: [255, 255, 255], fontStyle: "bold" },
