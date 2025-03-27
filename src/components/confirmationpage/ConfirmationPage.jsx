@@ -3,17 +3,25 @@ import { useLocation } from "react-router-dom";
 import CheckoutHeader from "../checkOutHeader/CheckoutHeader";
 import OrderNumber from "./OrderNumber";
 import Receipt from "./Receipt";
+import FooterTwo from "../homepage/footer/FooterTwo";
 
 const ConfirmationPage = () => {
   const { state: { firstName, lastName, email } = {} } = useLocation();
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "#f8f9fc",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <CheckoutHeader />
       <div
         style={{
+          flex: "1",
           padding: "36px 0 50px",
-          backgroundColor: "#f8f9fc",
         }}
       >
         <div
@@ -27,10 +35,6 @@ const ConfirmationPage = () => {
             margin: "0 auto",
             border: "1px solid #ececec",
             boxShadow: "2px 2px 20px #0000000a",
-            "@media (max-width: 768px)": {
-              width: "100%",
-              padding: "20px",
-            },
           }}
         >
           <OrderNumber
@@ -42,6 +46,7 @@ const ConfirmationPage = () => {
           <Receipt />
         </div>
       </div>
+      <FooterTwo />
     </div>
   );
 };
