@@ -12,6 +12,9 @@ const Receipt = ({ ticketQuantity, ticketAmount }) => {
     );
   }, []);
 
+  const feeAmount = (ticketAmount * 0.0224 + 100).toFixed(2); // Calculate fee amount
+  const totalAmount = (ticketAmount + parseFloat(feeAmount)).toFixed(2); // Calculate total amount
+
   return (
     <div className="checkout-table" style={{ marginTop: 60, maxWidth: "100%" }}>
       <div className="form-header">
@@ -121,7 +124,7 @@ const Receipt = ({ ticketQuantity, ticketAmount }) => {
                 Service Fee
                 <i
                   className="bi bi-question-circle"
-                  title="Credit card processing fee ($0.00) +  EventCreate Platform Fee ($0.00)"
+                  title="Credit card processing fee (2.24%) + EventCreate Platform Fee ($100.00)"
                   style={{ marginLeft: 4 }}
                 ></i>
               </strong>
@@ -141,7 +144,7 @@ const Receipt = ({ ticketQuantity, ticketAmount }) => {
                 },
               }}
             >
-              <span className="fee-amount">$0.00</span>
+              <span className="fee-amount">${feeAmount}</span>
             </td>
           </tr>
           <tr>
@@ -152,7 +155,7 @@ const Receipt = ({ ticketQuantity, ticketAmount }) => {
               className="text-right"
               style={{
                 fontSize: 15,
-                fontWeight: 600,
+                fontWeight: 700,
                 padding: 8,
                 lineHeight: 1.428571429,
                 verticalAlign: "top",
@@ -163,7 +166,7 @@ const Receipt = ({ ticketQuantity, ticketAmount }) => {
                 },
               }}
             >
-              <span className="total-amount">$0.00</span>
+              <span className="total-amount">${totalAmount}</span>
             </td>
           </tr>
         </tbody>
