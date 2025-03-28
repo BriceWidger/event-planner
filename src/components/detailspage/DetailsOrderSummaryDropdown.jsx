@@ -1,7 +1,7 @@
 import React from "react";
 import "./DetailsPage.css";
 
-const DetailsOrderSummaryDropdown = () => {
+const DetailsOrderSummaryDropdown = ({ ticketQuantity, ticketAmount }) => {
   return (
     <div
       className="order-summary-container custom-flex-column justify-items-center align-items-center"
@@ -24,12 +24,21 @@ const DetailsOrderSummaryDropdown = () => {
                 style={{ padding: "8px", verticalAlign: "middle" }}
               >
                 <h5 style={{ marginBottom: 0 }}>
-                  <span className="ticket-quantity">1</span>
+                  <span
+                    className="ticket-quantity"
+                    style={{ fontSize: "20px", fontWeight: "700" }}
+                  >
+                    {ticketQuantity}
+                  </span>
                 </h5>
               </td>
               <td style={{ verticalAlign: "middle" }}>
                 <h5
-                  style={{ fontSize: "17px", fontWeight: 500, marginBottom: 0 }}
+                  style={{
+                    fontSize: "17px",
+                    fontWeight: "700",
+                    marginBottom: 0,
+                  }}
                 >
                   General Admission
                 </h5>
@@ -43,13 +52,12 @@ const DetailsOrderSummaryDropdown = () => {
                     textAlign: "right",
                   }}
                 >
-                  $0.00
+                  ${ticketAmount.toFixed(2)}
                 </span>
               </td>
             </tr>
           </tbody>
         </table>
-        <table className="table"></table>
       </div>
     </div>
   );

@@ -95,7 +95,12 @@ const DetailsPage = () => {
           </div>
         </div>
       </div>
-      {isMobile && showDropdown && <DetailsOrderSummaryDropdown />}
+      {isMobile && showDropdown && (
+        <DetailsOrderSummaryDropdown
+          ticketQuantity={ticketQuantity}
+          ticketAmount={ticketAmount}
+        />
+      )}
       <div
         className="form-outer-container d-block d-md-none"
         style={{
