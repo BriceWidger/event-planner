@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Tooltip } from "bootstrap";
 
-// Tooltip triggers: Mobile - tap on icon, Desktop - cursor hover.
-
 const Receipt = ({ ticketQuantity, ticketAmount }) => {
   useEffect(() => {
     const tooltipTriggerList = document.querySelectorAll("[title]");
@@ -12,8 +10,8 @@ const Receipt = ({ ticketQuantity, ticketAmount }) => {
     );
   }, []);
 
-  const feeAmount = (ticketAmount * 0.0224 + 100).toFixed(2); // Calculate fee amount
-  const totalAmount = (ticketAmount + parseFloat(feeAmount)).toFixed(2); // Calculate total amount
+  const feeAmount = (ticketAmount * 0.0224 + 100).toFixed(2);
+  const totalAmount = (ticketAmount + parseFloat(feeAmount)).toFixed(2);
 
   return (
     <div className="checkout-table" style={{ marginTop: 60, maxWidth: "100%" }}>

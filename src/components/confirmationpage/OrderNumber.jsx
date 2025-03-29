@@ -4,7 +4,13 @@ import "jspdf-autotable";
 import QRCode from "qrcode";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-const OrderNumber = ({ orderNumber, firstName, lastName, email, totalAmount }) => {
+const OrderNumber = ({
+  orderNumber,
+  firstName,
+  lastName,
+  email,
+  totalAmount,
+}) => {
   const handlePrintTicket = async () => {
     const doc = new jsPDF("portrait", "px", "a4");
     const pageWidth = doc.internal.pageSize.getWidth();
@@ -38,21 +44,37 @@ const OrderNumber = ({ orderNumber, firstName, lastName, email, totalAmount }) =
     doc.setFontSize(18);
     doc.setFont("Helvetica", "bold");
     doc.setTextColor(0, 51, 102);
-    doc.text("Annual Conference", containerX + containerWidth / 2, qrCodeY + 20, { align: "center" });
+    doc.text(
+      "Annual Conference",
+      containerX + containerWidth / 2,
+      qrCodeY + 20,
+      { align: "center" }
+    );
 
     doc.setFontSize(12);
     doc.setFont("Helvetica", "normal");
     doc.setTextColor(60, 60, 60);
-    doc.text(`Order ID: #${orderNumber}`, containerX + containerWidth / 2, qrCodeY + 40, { align: "center" });
+    doc.text(
+      `Order ID: #${orderNumber}`,
+      containerX + containerWidth / 2,
+      qrCodeY + 40,
+      { align: "center" }
+    );
 
     doc.autoTable({
       startY: qrCodeY + 120,
       margin: { left: containerX + 20, right: containerX + 20 },
       head: [["Attendee", "Price", "Type"]],
-      body: [[`${firstName} ${lastName}`, `$${totalAmount}`, "General Admission"]],
+      body: [
+        [`${firstName} ${lastName}`, `$${totalAmount}`, "General Admission"],
+      ],
       theme: "grid",
       styles: { halign: "center", fontSize: 10, cellPadding: 5 },
-      headStyles: { fillColor: [0, 51, 102], textColor: [255, 255, 255], fontStyle: "bold" },
+      headStyles: {
+        fillColor: [0, 51, 102],
+        textColor: [255, 255, 255],
+        fontStyle: "bold",
+      },
       bodyStyles: { textColor: [0, 0, 0] },
     });
 
@@ -75,7 +97,15 @@ const OrderNumber = ({ orderNumber, firstName, lastName, email, totalAmount }) =
   };
 
   return (
-    <div className="ticket-container-main">
+    <div
+      className="ticket-container-main"
+      style={{
+        overflow: "hidden",
+        wordWrap: "break-word",
+        maxWidth: "100%",
+        boxSizing: "border-box",
+      }}
+    >
       <h1
         style={{
           fontWeight: 700,
@@ -104,13 +134,18 @@ const OrderNumber = ({ orderNumber, firstName, lastName, email, totalAmount }) =
           borderTop: "3px solid #1f2834",
           padding: "40px 40px",
           marginBottom: "20px",
+          maxWidth: "100%",
+          boxSizing: "border-box",
           "@media (max-width: 768px)": {
             padding: "20px",
           },
         }}
       >
         <div className="row">
-          <div className="col-md-6 col-lg-7">
+          <div
+            className="col-md-6 col-lg-7"
+            style={{ overflow: "hidden", wordWrap: "break-word" }}
+          >
             <h5 style={{ fontSize: 17, fontWeight: 700, marginBottom: 10 }}>
               Order Number: {orderNumber}
             </h5>
@@ -127,7 +162,10 @@ const OrderNumber = ({ orderNumber, firstName, lastName, email, totalAmount }) =
               {email}
             </p>
           </div>
-          <div className="col-md-6 col-lg-5">
+          <div
+            className="col-md-6 col-lg-5"
+            style={{ overflow: "hidden", wordWrap: "break-word" }}
+          >
             <div className="form-group">
               <button
                 className="btn btn-primary"
@@ -138,13 +176,13 @@ const OrderNumber = ({ orderNumber, firstName, lastName, email, totalAmount }) =
                   fontSize: 13,
                   padding: "15px 28px",
                   borderRadius: 6,
-                  display: "inline-block",
+                  display: "block",
+                  maxWidth: "100%",
                   fontWeight: 700,
                   cursor: "pointer",
                   border: "none",
                   background: "#334999",
                   textAlign: "center",
-                  whiteSpace: "nowrap",
                   verticalAlign: "middle",
                   touchAction: "manipulation",
                   lineHeight: 1.428571429,

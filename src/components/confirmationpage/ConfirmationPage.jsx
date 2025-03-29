@@ -40,11 +40,11 @@ const ConfirmationPage = () => {
           }}
         >
           <OrderNumber
-            orderNumber={orderNumber} // Pass the order number
+            orderNumber={orderNumber}
             firstName={firstName}
             lastName={lastName}
             email={email}
-            totalAmount={(ticketAmount + (ticketAmount * 0.0224 + 100)).toFixed(2)} // Calculate total amount
+            totalAmount={(ticketAmount + (ticketAmount * 0.0224 + 100)).toFixed(2)}
           />
           <Receipt
             ticketQuantity={ticketQuantity}
